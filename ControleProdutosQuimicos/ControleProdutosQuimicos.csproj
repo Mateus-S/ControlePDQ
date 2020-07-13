@@ -108,7 +108,7 @@
     <Compile Include="Apresentação\NovoUsuario.Designer.cs">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="BDProdutosQuimicosDataSet.Designer.cs">
+    <Compile Include="BancosBD\BDProdutosQuimicosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
@@ -139,15 +139,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BDProdutosQuimicosDataSet.xsc">
+    <None Include="BancosBD\BDProdutosQuimicosDataSet.xsc">
       <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDProdutosQuimicosDataSet.xsd">
+    <None Include="BancosBD\BDProdutosQuimicosDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BDProdutosQuimicosDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDProdutosQuimicosDataSet.xss">
+    <None Include="BancosBD\BDProdutosQuimicosDataSet.xss">
       <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
     </None>
     <None Include="ControleProdutosQuimicos_TemporaryKey.pfx" />
@@ -180,8 +180,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BancosBD\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ControleProdutosQuimicos {
+namespace ControleProdutosQuimicos.BancosBD {
     
     
     /// <summary>
@@ -4726,7 +4726,7 @@ namespace ControleProdutosQuimicos {
         }
     }
 }
-namespace ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters {
+namespace ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters {
     
     
     /// <summary>

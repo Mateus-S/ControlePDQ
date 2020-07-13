@@ -1,4 +1,6 @@
-﻿namespace ControleProdutosQuimicos
+﻿using ControleProdutosQuimicos.BancosBD;
+namespace ControleProdutosQuimicos
+   
 {
     partial class frm_Cadastro
     {
@@ -63,7 +65,7 @@
             this.quantUsadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioLogadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblAcidoCloridricoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bDProdutosQuimicosDataSet = new ControleProdutosQuimicos.BDProdutosQuimicosDataSet();
+            this.bDProdutosQuimicosDataSet = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,15 +150,15 @@
             this.tblAcetonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblMetiletilcetonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblAcidoSulfuricoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblAcidoCloridricoTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter();
-            this.tblAcidoSulfuricoTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter();
+            this.tblAcidoCloridricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter();
+            this.tblAcidoSulfuricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter();
             this.tblHidroxidoPostasioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblHidroxidoPostasioTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter();
+            this.tblHidroxidoPostasioTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter();
             this.tblHidroxidoPostasioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblToluenoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblToluenoTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter();
-            this.tblAcetonaTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter();
-            this.tblMetiletilcetonaTableAdapter = new ControleProdutosQuimicos.BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter();
+            this.tblToluenoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter();
+            this.tblAcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter();
+            this.tblMetiletilcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tab_Produtos.SuspendLayout();
@@ -1355,7 +1357,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private BDProdutosQuimicosDataSet bDProdutosQuimicosDataSet;
         private System.Windows.Forms.BindingSource tblAcidoCloridricoBindingSource3;
-        private BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter tblAcidoCloridricoTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter tblAcidoCloridricoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdutosQuimicosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn desenhoDataGridViewTextBoxColumn;
@@ -1380,10 +1382,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.BindingSource tblAcidoSulfuricoBindingSource2;
-        private BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter tblAcidoSulfuricoTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter tblAcidoSulfuricoTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource1;
-        private BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter tblHidroxidoPostasioTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter tblHidroxidoPostasioTableAdapter;
         private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -1398,7 +1400,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.BindingSource tblToluenoBindingSource1;
-        private BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter tblToluenoTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter tblToluenoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdutosQuimicosDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn desenhoDataGridViewTextBoxColumn1;
@@ -1425,7 +1427,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.BindingSource tblAcetonaBindingSource1;
-        private BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter tblAcetonaTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter tblAcetonaTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
@@ -1439,6 +1441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.BindingSource tblMetiletilcetonaBindingSource2;
-        private BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter tblMetiletilcetonaTableAdapter;
+        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter tblMetiletilcetonaTableAdapter;
     }
 }
