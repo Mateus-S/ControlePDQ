@@ -368,6 +368,7 @@
             this.BotaoLimparDados.TabIndex = 24;
             this.BotaoLimparDados.Text = "Deletar";
             this.BotaoLimparDados.UseVisualStyleBackColor = false;
+            this.BotaoLimparDados.Click += new System.EventHandler(this.BotaoLimparDados_Click);
             // 
             // BotaoSair
             // 

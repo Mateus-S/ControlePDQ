@@ -11,7 +11,7 @@ namespace ControleProdutosQuimicos.DAL
     {
         public bool tem = false;
         public string mensagem = "";
-        public int testeestoque;
+        public int EstoqueTotal;
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
         SqlDataReader dr;
@@ -90,7 +90,7 @@ namespace ControleProdutosQuimicos.DAL
         }
         public string CadastrarProduto(String Produto, String Desenho, String Numero_NF,
                                        String Numero_Pedido, String Quant_Comprada, String Quant_Usada,
-                                       String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, string resultado)
+                                       String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, string Resultado)
         {
             // comandos para inserir aqui o que vai cadastrar no banco retornando uma string informando se deu certo ou se houve algum erro.
             tem = false;
@@ -111,11 +111,11 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Ácido Sulfúrico"))
                 {
-                    cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
+                    cmd.CommandText = "insert into tblAcidoSulfurico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
                                   "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
                                   "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
@@ -127,11 +127,11 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Hidróxido De Potássio"))
                 {
-                    cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
+                    cmd.CommandText = "insert into tblHidroxidoPostasio (Produto, Desenho, Numero_NF, Numero_Pedido, " +
                                  "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
                                  "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
@@ -143,11 +143,11 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Tolueno"))
                 {
-                    cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
+                    cmd.CommandText = "insert into tblTolueno (Produto, Desenho, Numero_NF, Numero_Pedido, " +
                                    "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
                                    "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
@@ -159,11 +159,11 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Acetona"))
                 {
-                    cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
+                    cmd.CommandText = "insert into tblAcetona (Produto, Desenho, Numero_NF, Numero_Pedido, " +
                                   "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
                                   "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
@@ -175,11 +175,11 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Metiletilcetona"))
                 {
-                    cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
+                    cmd.CommandText = "insert into tblMetiletilcetona (Produto, Desenho, Numero_NF, Numero_Pedido, " +
                                   "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
                                   "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
@@ -191,7 +191,7 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
-                    cmd.Parameters.AddWithValue("@rs", resultado);
+                    cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
 
 
@@ -218,27 +218,109 @@ namespace ControleProdutosQuimicos.DAL
 
         public int ValorAtualEstoque()
         {
-            cmd.Connection = con.Conectar();
-            cmd.CommandText = "SELECT SUM (Estoque) from tblAcidocloridrico";
-            try
+            
+            if (Program.CxProduto == "Ácido Cloridrico")
             {
-                var testeestoque2 = Convert.ToInt32(cmd.ExecuteScalar());
-                testeestoque = Convert.ToInt32(testeestoque2);
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = " SELECT MAX (Estoque) from tblAcidocloridrico";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+
             }
-            catch (Exception ex)
+            else if (Program.CxProduto == "Ácido Sulfúrico")
             {
-                Console.WriteLine(ex.Message);
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = " SELECT MAX (Estoque) from tblAcidoSulfurico";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+            else if (Program.CxProduto == "Hidróxido De Potássio")
+            {
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = "SELECT MAX (Estoque) from tblHidroxidoPostasio";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
 
+            else if (Program.CxProduto == "Tolueno")
+            {
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = "SELECT MAX (Estoque) from tblTolueno";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+            else if (Program.CxProduto == "Acetona")
+            {
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = "SELECT MAX (Estoque) from tblAcetona";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+            else if (Program.CxProduto == "Metiletilcetona")
+            {
+                cmd.Connection = con.Conectar();
+                cmd.CommandText = "SELECT MAX (Estoque) from tblMetiletilcetona";
+                try
+                {
+                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+
+            }
 
             con.desconectar();
             this.mensagem = "Cadastrado com Sucesso";
             tem = true;
-            return testeestoque;
+            return EstoqueTotal;
         }
 
-
-
+        
     }
 }
 

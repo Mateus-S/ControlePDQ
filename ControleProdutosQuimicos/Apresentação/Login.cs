@@ -34,7 +34,7 @@ namespace ControleProdutosQuimicos
             {
                 if (controle.tem)
                 {
-                    MessageBox.Show("Logado com Sucesso,  Bem vindo: " + Program.Usuariologado, "\n" + "BEM VINDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Logado com Sucesso: "  + Program.Usuariologado,  "BEM VINDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frm_Menu menu = new frm_Menu();
                     menu.Show();
                     this.Hide();
