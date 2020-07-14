@@ -218,11 +218,11 @@ namespace ControleProdutosQuimicos.DAL
 
         public int ValorAtualEstoque()
         {
-            
+
             if (Program.CxProduto == "Ácido Cloridrico")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = " SELECT MAX (Estoque) from tblAcidocloridrico";
+                cmd.CommandText = " SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcidocloridrico";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
@@ -238,7 +238,7 @@ namespace ControleProdutosQuimicos.DAL
             else if (Program.CxProduto == "Ácido Sulfúrico")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = " SELECT MAX (Estoque) from tblAcidoSulfurico";
+                cmd.CommandText = " SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcidoSulfurico";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
@@ -254,7 +254,7 @@ namespace ControleProdutosQuimicos.DAL
             else if (Program.CxProduto == "Hidróxido De Potássio")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT MAX (Estoque) from tblHidroxidoPostasio";
+                cmd.CommandText = "SELECT SUM (Estoque) - SUM (Quant_Usada) from tblHidroxidoPostasio";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
@@ -266,11 +266,10 @@ namespace ControleProdutosQuimicos.DAL
                 }
 
             }
-
             else if (Program.CxProduto == "Tolueno")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT MAX (Estoque) from tblTolueno";
+                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada)  from tblTolueno";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
@@ -285,7 +284,7 @@ namespace ControleProdutosQuimicos.DAL
             else if (Program.CxProduto == "Acetona")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT MAX (Estoque) from tblAcetona";
+                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcetona";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
@@ -300,7 +299,7 @@ namespace ControleProdutosQuimicos.DAL
             else if (Program.CxProduto == "Metiletilcetona")
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT MAX (Estoque) from tblMetiletilcetona";
+                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblMetiletilcetona";
                 try
                 {
                     var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
