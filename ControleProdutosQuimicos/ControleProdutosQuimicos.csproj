@@ -49,10 +49,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>91824D0440BFA85352B59905CA66ACC28EF9D4F9</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BFC0F61DB66FD3343A015F8850503D4378404D69</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ControleProdutosQuimicos_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -108,10 +109,35 @@
     <Compile Include="Apresentação\NovoUsuario.Designer.cs">
       <DependentUpon>NovoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="BancosBD\BDProdutosQuimicosDataSet.Designer.cs">
+    <Compile Include="BancosBD\BdAcetona.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
+      <DependentUpon>BdAcetona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosBD\BdAcidoCloridrico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdAcidoCloridrico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosBD\BdAcidoSulfurico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdAcidoSulfurico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosBD\BdHidroxidoPostasio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdHidroxidoPostasio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosBD\BdMetiletilcetona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdMetiletilcetona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BancosBD\BdTolueno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BdTolueno.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexões\Conexao.cs" />
     <Compile Include="Conexões\LoginDalComandos.cs" />
@@ -139,17 +165,73 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BancosBD\BDProdutosQuimicosDataSet.xsc">
-      <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
+    <None Include="BancosBD\BdAcetona.xsc">
+      <DependentUpon>BdAcetona.xsd</DependentUpon>
     </None>
-    <None Include="BancosBD\BDProdutosQuimicosDataSet.xsd">
+    <None Include="BancosBD\BdAcetona.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDProdutosQuimicosDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BdAcetona.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BancosBD\BDProdutosQuimicosDataSet.xss">
-      <DependentUpon>BDProdutosQuimicosDataSet.xsd</DependentUpon>
+    <None Include="BancosBD\BdAcetona.xss">
+      <DependentUpon>BdAcetona.xsd</DependentUpon>
     </None>
+    <None Include="BancosBD\BdAcidoCloridrico.xsc">
+      <DependentUpon>BdAcidoCloridrico.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdAcidoCloridrico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdAcidoCloridrico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosBD\BdAcidoCloridrico.xss">
+      <DependentUpon>BdAcidoCloridrico.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdAcidoSulfurico.xsc">
+      <DependentUpon>BdAcidoSulfurico.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdAcidoSulfurico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdAcidoSulfurico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosBD\BdAcidoSulfurico.xss">
+      <DependentUpon>BdAcidoSulfurico.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdHidroxidoPostasio.xsc">
+      <DependentUpon>BdHidroxidoPostasio.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdHidroxidoPostasio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdHidroxidoPostasio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosBD\BdHidroxidoPostasio.xss">
+      <DependentUpon>BdHidroxidoPostasio.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdMetiletilcetona.xsc">
+      <DependentUpon>BdMetiletilcetona.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdMetiletilcetona.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdMetiletilcetona.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosBD\BdMetiletilcetona.xss">
+      <DependentUpon>BdMetiletilcetona.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdTolueno.xsc">
+      <DependentUpon>BdTolueno.xsd</DependentUpon>
+    </None>
+    <None Include="BancosBD\BdTolueno.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BdTolueno.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BancosBD\BdTolueno.xss">
+      <DependentUpon>BdTolueno.xsd</DependentUpon>
+    </None>
+    <None Include="ControleProdutosQuimicos_1_TemporaryKey.pfx" />
     <None Include="ControleProdutosQuimicos_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

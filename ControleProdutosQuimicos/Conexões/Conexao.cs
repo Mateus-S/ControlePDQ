@@ -14,7 +14,7 @@ namespace ControleProdutosQuimicos.DAL
         public Conexao()
 
         {
-            con.ConnectionString = @"Data Source=MATEUS_SA\SQLSERVER;Initial Catalog=BDProdutosQuimicos;Integrated Security=True ";
+            con.ConnectionString = @"Data Source=DESKTOP-CSEA3NQ;Initial Catalog=BDPQ;Integrated Security=True ";
         }
         public SqlConnection Conectar()
 

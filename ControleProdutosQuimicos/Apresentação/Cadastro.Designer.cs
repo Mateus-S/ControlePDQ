@@ -1,4 +1,4 @@
-﻿using ControleProdutosQuimicos.BancosBD;
+﻿using ControleProdutosQuimicos;
 namespace ControleProdutosQuimicos
    
 {
@@ -53,88 +53,26 @@ namespace ControleProdutosQuimicos
             this.tab_Produtos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idProdutosQuimicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desenhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroNFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataEmissaoNFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantCompradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantUsadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioLogadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblAcidoCloridricoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bDProdutosQuimicosDataSet = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblAcidoSulfuricoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcidoSulfuricoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desenhoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroNFDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataEmissaoNFDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroPedidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataPedidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoqueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantCompradaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantUsadaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioLogadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblHidroxidoPostasioBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHidroxidoPostasioBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblToluenoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblToluenoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblAcetonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcetonaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblMetiletilcetonaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcidoSulfuricoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHidroxidoPostasioBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblToluenoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcetonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblMetiletilcetonaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblAcidoCloridricoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblMetiletilcetonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -150,36 +88,119 @@ namespace ControleProdutosQuimicos
             this.tblAcetonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblMetiletilcetonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblAcidoSulfuricoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblAcidoCloridricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter();
-            this.tblAcidoSulfuricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter();
             this.tblHidroxidoPostasioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblHidroxidoPostasioTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter();
             this.tblHidroxidoPostasioBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tblToluenoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblToluenoTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter();
-            this.tblAcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter();
-            this.tblMetiletilcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter();
+            this.tblAcidoCloridricoBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.bdAcidoCloridrico = new ControleProdutosQuimicos.BancosBD.BdAcidoCloridrico();
+            this.tblAcidoCloridricoBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcidoCloridricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BdAcidoCloridricoTableAdapters.tblAcidoCloridricoTableAdapter();
+            this.dataGridViewTextBoxColumn100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn103 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn104 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn105 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn106 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn109 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn110 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdAcidoSulfurico = new ControleProdutosQuimicos.BancosBD.BdAcidoSulfurico();
+            this.tblAcidoSulfuricoBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcidoSulfuricoTableAdapter = new ControleProdutosQuimicos.BancosBD.BdAcidoSulfuricoTableAdapters.tblAcidoSulfuricoTableAdapter();
+            this.dataGridViewTextBoxColumn111 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn112 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn113 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn114 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn115 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn116 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn117 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn118 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn119 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn121 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdHidroxidoPostasio = new ControleProdutosQuimicos.BancosBD.BdHidroxidoPostasio();
+            this.tblHidroxidoPostasioBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHidroxidoPostasioTableAdapter = new ControleProdutosQuimicos.BancosBD.BdHidroxidoPostasioTableAdapters.tblHidroxidoPostasioTableAdapter();
+            this.dataGridViewTextBoxColumn122 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn123 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn124 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn125 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn126 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn127 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn128 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn129 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn130 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn131 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn132 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdTolueno = new ControleProdutosQuimicos.BancosBD.BdTolueno();
+            this.tblToluenoBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblToluenoTableAdapter = new ControleProdutosQuimicos.BancosBD.BdToluenoTableAdapters.tblToluenoTableAdapter();
+            this.dataGridViewTextBoxColumn133 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn134 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn135 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn136 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn137 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn138 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn139 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn140 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn141 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn142 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn143 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdAcetona = new ControleProdutosQuimicos.BancosBD.BdAcetona();
+            this.tblAcetonaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BdAcetonaTableAdapters.tblAcetonaTableAdapter();
+            this.dataGridViewTextBoxColumn144 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn145 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn146 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn147 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn148 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn149 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn150 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn151 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn152 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn153 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn154 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdMetiletilcetona = new ControleProdutosQuimicos.BancosBD.BdMetiletilcetona();
+            this.tblMetiletilcetonaBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMetiletilcetonaTableAdapter = new ControleProdutosQuimicos.BancosBD.BdMetiletilcetonaTableAdapters.tblMetiletilcetonaTableAdapter();
+            this.dataGridViewTextBoxColumn155 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn156 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn157 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn158 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn159 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn160 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn161 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn162 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn163 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn164 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn165 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tab_Produtos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDProdutosQuimicosDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource3)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource4)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource3)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource2)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource)).BeginInit();
@@ -194,11 +215,23 @@ namespace ControleProdutosQuimicos
             ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcidoCloridrico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcidoSulfurico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdHidroxidoPostasio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdTolueno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcetona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdMetiletilcetona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProduto
             // 
-            this.lblProduto.AutoSize = true;
             this.lblProduto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduto.Location = new System.Drawing.Point(34, 101);
             this.lblProduto.Name = "lblProduto";
@@ -441,111 +474,24 @@ namespace ControleProdutosQuimicos
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdutosQuimicosDataGridViewTextBoxColumn,
-            this.produtoDataGridViewTextBoxColumn,
-            this.desenhoDataGridViewTextBoxColumn,
-            this.numeroNFDataGridViewTextBoxColumn,
-            this.dataEmissaoNFDataGridViewTextBoxColumn,
-            this.numeroPedidoDataGridViewTextBoxColumn,
-            this.dataPedidoDataGridViewTextBoxColumn,
-            this.estoqueDataGridViewTextBoxColumn,
-            this.quantCompradaDataGridViewTextBoxColumn,
-            this.quantUsadaDataGridViewTextBoxColumn,
-            this.usuarioLogadoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblAcidoCloridricoBindingSource3;
+            this.dataGridViewTextBoxColumn100,
+            this.dataGridViewTextBoxColumn101,
+            this.dataGridViewTextBoxColumn102,
+            this.dataGridViewTextBoxColumn103,
+            this.dataGridViewTextBoxColumn104,
+            this.dataGridViewTextBoxColumn105,
+            this.dataGridViewTextBoxColumn106,
+            this.dataGridViewTextBoxColumn107,
+            this.dataGridViewTextBoxColumn108,
+            this.dataGridViewTextBoxColumn109,
+            this.dataGridViewTextBoxColumn110});
+            this.dataGridView1.DataSource = this.tblAcidoCloridricoBindingSource5;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idProdutosQuimicosDataGridViewTextBoxColumn
-            // 
-            this.idProdutosQuimicosDataGridViewTextBoxColumn.DataPropertyName = "IdProdutosQuimicos";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn.HeaderText = "IdProdutosQuimicos";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn.Name = "idProdutosQuimicosDataGridViewTextBoxColumn";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // produtoDataGridViewTextBoxColumn
-            // 
-            this.produtoDataGridViewTextBoxColumn.DataPropertyName = "Produto";
-            this.produtoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.produtoDataGridViewTextBoxColumn.Name = "produtoDataGridViewTextBoxColumn";
-            this.produtoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // desenhoDataGridViewTextBoxColumn
-            // 
-            this.desenhoDataGridViewTextBoxColumn.DataPropertyName = "Desenho";
-            this.desenhoDataGridViewTextBoxColumn.HeaderText = "Desenho";
-            this.desenhoDataGridViewTextBoxColumn.Name = "desenhoDataGridViewTextBoxColumn";
-            this.desenhoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroNFDataGridViewTextBoxColumn
-            // 
-            this.numeroNFDataGridViewTextBoxColumn.DataPropertyName = "Numero_NF";
-            this.numeroNFDataGridViewTextBoxColumn.HeaderText = "Numero_NF";
-            this.numeroNFDataGridViewTextBoxColumn.Name = "numeroNFDataGridViewTextBoxColumn";
-            this.numeroNFDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataEmissaoNFDataGridViewTextBoxColumn
-            // 
-            this.dataEmissaoNFDataGridViewTextBoxColumn.DataPropertyName = "Data_Emissao_NF";
-            this.dataEmissaoNFDataGridViewTextBoxColumn.HeaderText = "Data_Emissao_NF";
-            this.dataEmissaoNFDataGridViewTextBoxColumn.Name = "dataEmissaoNFDataGridViewTextBoxColumn";
-            this.dataEmissaoNFDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroPedidoDataGridViewTextBoxColumn
-            // 
-            this.numeroPedidoDataGridViewTextBoxColumn.DataPropertyName = "Numero_Pedido";
-            this.numeroPedidoDataGridViewTextBoxColumn.HeaderText = "Numero_Pedido";
-            this.numeroPedidoDataGridViewTextBoxColumn.Name = "numeroPedidoDataGridViewTextBoxColumn";
-            this.numeroPedidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataPedidoDataGridViewTextBoxColumn
-            // 
-            this.dataPedidoDataGridViewTextBoxColumn.DataPropertyName = "Data_Pedido";
-            this.dataPedidoDataGridViewTextBoxColumn.HeaderText = "Data_Pedido";
-            this.dataPedidoDataGridViewTextBoxColumn.Name = "dataPedidoDataGridViewTextBoxColumn";
-            this.dataPedidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // estoqueDataGridViewTextBoxColumn
-            // 
-            this.estoqueDataGridViewTextBoxColumn.DataPropertyName = "Estoque";
-            this.estoqueDataGridViewTextBoxColumn.HeaderText = "Estoque";
-            this.estoqueDataGridViewTextBoxColumn.Name = "estoqueDataGridViewTextBoxColumn";
-            this.estoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantCompradaDataGridViewTextBoxColumn
-            // 
-            this.quantCompradaDataGridViewTextBoxColumn.DataPropertyName = "Quant_Comprada";
-            this.quantCompradaDataGridViewTextBoxColumn.HeaderText = "Quant_Comprada";
-            this.quantCompradaDataGridViewTextBoxColumn.Name = "quantCompradaDataGridViewTextBoxColumn";
-            this.quantCompradaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantUsadaDataGridViewTextBoxColumn
-            // 
-            this.quantUsadaDataGridViewTextBoxColumn.DataPropertyName = "Quant_Usada";
-            this.quantUsadaDataGridViewTextBoxColumn.HeaderText = "Quant_Usada";
-            this.quantUsadaDataGridViewTextBoxColumn.Name = "quantUsadaDataGridViewTextBoxColumn";
-            this.quantUsadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioLogadoDataGridViewTextBoxColumn
-            // 
-            this.usuarioLogadoDataGridViewTextBoxColumn.DataPropertyName = "Usuario_Logado";
-            this.usuarioLogadoDataGridViewTextBoxColumn.HeaderText = "Usuario_Logado";
-            this.usuarioLogadoDataGridViewTextBoxColumn.Name = "usuarioLogadoDataGridViewTextBoxColumn";
-            this.usuarioLogadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tblAcidoCloridricoBindingSource3
-            // 
-            this.tblAcidoCloridricoBindingSource3.DataMember = "tblAcidoCloridrico";
-            this.tblAcidoCloridricoBindingSource3.DataSource = this.bDProdutosQuimicosDataSet;
-            // 
-            // bDProdutosQuimicosDataSet
-            // 
-            this.bDProdutosQuimicosDataSet.DataSetName = "BDProdutosQuimicosDataSet";
-            this.bDProdutosQuimicosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage2
             // 
@@ -566,106 +512,24 @@ namespace ControleProdutosQuimicos
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.dataGridView2.DataSource = this.tblAcidoSulfuricoBindingSource2;
+            this.dataGridViewTextBoxColumn111,
+            this.dataGridViewTextBoxColumn112,
+            this.dataGridViewTextBoxColumn113,
+            this.dataGridViewTextBoxColumn114,
+            this.dataGridViewTextBoxColumn115,
+            this.dataGridViewTextBoxColumn116,
+            this.dataGridViewTextBoxColumn117,
+            this.dataGridViewTextBoxColumn118,
+            this.dataGridViewTextBoxColumn119,
+            this.dataGridViewTextBoxColumn120,
+            this.dataGridViewTextBoxColumn121});
+            this.dataGridView2.DataSource = this.tblAcidoSulfuricoBindingSource4;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Produto";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Desenho";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Desenho";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Numero_NF";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Numero_NF";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Data_Pedido";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Data_Pedido";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Estoque";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Estoque";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Quant_Usada";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Quant_Usada";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // tblAcidoSulfuricoBindingSource2
-            // 
-            this.tblAcidoSulfuricoBindingSource2.DataMember = "tblAcidoSulfurico";
-            this.tblAcidoSulfuricoBindingSource2.DataSource = this.bDProdutosQuimicosDataSet;
             // 
             // tabPage3
             // 
@@ -686,18 +550,18 @@ namespace ControleProdutosQuimicos
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1,
-            this.produtoDataGridViewTextBoxColumn1,
-            this.desenhoDataGridViewTextBoxColumn1,
-            this.numeroNFDataGridViewTextBoxColumn1,
-            this.dataEmissaoNFDataGridViewTextBoxColumn1,
-            this.numeroPedidoDataGridViewTextBoxColumn1,
-            this.dataPedidoDataGridViewTextBoxColumn1,
-            this.estoqueDataGridViewTextBoxColumn1,
-            this.quantCompradaDataGridViewTextBoxColumn1,
-            this.quantUsadaDataGridViewTextBoxColumn1,
-            this.usuarioLogadoDataGridViewTextBoxColumn1});
-            this.dataGridView3.DataSource = this.tblHidroxidoPostasioBindingSource3;
+            this.dataGridViewTextBoxColumn122,
+            this.dataGridViewTextBoxColumn123,
+            this.dataGridViewTextBoxColumn124,
+            this.dataGridViewTextBoxColumn125,
+            this.dataGridViewTextBoxColumn126,
+            this.dataGridViewTextBoxColumn127,
+            this.dataGridViewTextBoxColumn128,
+            this.dataGridViewTextBoxColumn129,
+            this.dataGridViewTextBoxColumn130,
+            this.dataGridViewTextBoxColumn131,
+            this.dataGridViewTextBoxColumn132});
+            this.dataGridView3.DataSource = this.tblHidroxidoPostasioBindingSource5;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
@@ -705,87 +569,9 @@ namespace ControleProdutosQuimicos
             this.dataGridView3.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView3.TabIndex = 2;
             // 
-            // idProdutosQuimicosDataGridViewTextBoxColumn1
+            // tblHidroxidoPostasioBindingSource4
             // 
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1.DataPropertyName = "IdProdutosQuimicos";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1.HeaderText = "IdProdutosQuimicos";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1.Name = "idProdutosQuimicosDataGridViewTextBoxColumn1";
-            this.idProdutosQuimicosDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // produtoDataGridViewTextBoxColumn1
-            // 
-            this.produtoDataGridViewTextBoxColumn1.DataPropertyName = "Produto";
-            this.produtoDataGridViewTextBoxColumn1.HeaderText = "Produto";
-            this.produtoDataGridViewTextBoxColumn1.Name = "produtoDataGridViewTextBoxColumn1";
-            this.produtoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // desenhoDataGridViewTextBoxColumn1
-            // 
-            this.desenhoDataGridViewTextBoxColumn1.DataPropertyName = "Desenho";
-            this.desenhoDataGridViewTextBoxColumn1.HeaderText = "Desenho";
-            this.desenhoDataGridViewTextBoxColumn1.Name = "desenhoDataGridViewTextBoxColumn1";
-            this.desenhoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // numeroNFDataGridViewTextBoxColumn1
-            // 
-            this.numeroNFDataGridViewTextBoxColumn1.DataPropertyName = "Numero_NF";
-            this.numeroNFDataGridViewTextBoxColumn1.HeaderText = "Numero_NF";
-            this.numeroNFDataGridViewTextBoxColumn1.Name = "numeroNFDataGridViewTextBoxColumn1";
-            this.numeroNFDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataEmissaoNFDataGridViewTextBoxColumn1
-            // 
-            this.dataEmissaoNFDataGridViewTextBoxColumn1.DataPropertyName = "Data_Emissao_NF";
-            this.dataEmissaoNFDataGridViewTextBoxColumn1.HeaderText = "Data_Emissao_NF";
-            this.dataEmissaoNFDataGridViewTextBoxColumn1.Name = "dataEmissaoNFDataGridViewTextBoxColumn1";
-            this.dataEmissaoNFDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // numeroPedidoDataGridViewTextBoxColumn1
-            // 
-            this.numeroPedidoDataGridViewTextBoxColumn1.DataPropertyName = "Numero_Pedido";
-            this.numeroPedidoDataGridViewTextBoxColumn1.HeaderText = "Numero_Pedido";
-            this.numeroPedidoDataGridViewTextBoxColumn1.Name = "numeroPedidoDataGridViewTextBoxColumn1";
-            this.numeroPedidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataPedidoDataGridViewTextBoxColumn1
-            // 
-            this.dataPedidoDataGridViewTextBoxColumn1.DataPropertyName = "Data_Pedido";
-            this.dataPedidoDataGridViewTextBoxColumn1.HeaderText = "Data_Pedido";
-            this.dataPedidoDataGridViewTextBoxColumn1.Name = "dataPedidoDataGridViewTextBoxColumn1";
-            this.dataPedidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // estoqueDataGridViewTextBoxColumn1
-            // 
-            this.estoqueDataGridViewTextBoxColumn1.DataPropertyName = "Estoque";
-            this.estoqueDataGridViewTextBoxColumn1.HeaderText = "Estoque";
-            this.estoqueDataGridViewTextBoxColumn1.Name = "estoqueDataGridViewTextBoxColumn1";
-            this.estoqueDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // quantCompradaDataGridViewTextBoxColumn1
-            // 
-            this.quantCompradaDataGridViewTextBoxColumn1.DataPropertyName = "Quant_Comprada";
-            this.quantCompradaDataGridViewTextBoxColumn1.HeaderText = "Quant_Comprada";
-            this.quantCompradaDataGridViewTextBoxColumn1.Name = "quantCompradaDataGridViewTextBoxColumn1";
-            this.quantCompradaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // quantUsadaDataGridViewTextBoxColumn1
-            // 
-            this.quantUsadaDataGridViewTextBoxColumn1.DataPropertyName = "Quant_Usada";
-            this.quantUsadaDataGridViewTextBoxColumn1.HeaderText = "Quant_Usada";
-            this.quantUsadaDataGridViewTextBoxColumn1.Name = "quantUsadaDataGridViewTextBoxColumn1";
-            this.quantUsadaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // usuarioLogadoDataGridViewTextBoxColumn1
-            // 
-            this.usuarioLogadoDataGridViewTextBoxColumn1.DataPropertyName = "Usuario_Logado";
-            this.usuarioLogadoDataGridViewTextBoxColumn1.HeaderText = "Usuario_Logado";
-            this.usuarioLogadoDataGridViewTextBoxColumn1.Name = "usuarioLogadoDataGridViewTextBoxColumn1";
-            this.usuarioLogadoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tblHidroxidoPostasioBindingSource3
-            // 
-            this.tblHidroxidoPostasioBindingSource3.DataMember = "tblHidroxidoPostasio";
-            this.tblHidroxidoPostasioBindingSource3.DataSource = this.bDProdutosQuimicosDataSet;
+            this.tblHidroxidoPostasioBindingSource4.DataMember = "tblHidroxidoPostasio";
             // 
             // tabPage4
             // 
@@ -806,106 +592,24 @@ namespace ControleProdutosQuimicos
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33});
-            this.dataGridView4.DataSource = this.tblToluenoBindingSource2;
+            this.dataGridViewTextBoxColumn133,
+            this.dataGridViewTextBoxColumn134,
+            this.dataGridViewTextBoxColumn135,
+            this.dataGridViewTextBoxColumn136,
+            this.dataGridViewTextBoxColumn137,
+            this.dataGridViewTextBoxColumn138,
+            this.dataGridViewTextBoxColumn139,
+            this.dataGridViewTextBoxColumn140,
+            this.dataGridViewTextBoxColumn141,
+            this.dataGridViewTextBoxColumn142,
+            this.dataGridViewTextBoxColumn143});
+            this.dataGridView4.DataSource = this.tblToluenoBindingSource4;
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(3, 3);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView4.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn23.HeaderText = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Produto";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "Desenho";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Desenho";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "Numero_NF";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Numero_NF";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "Data_Pedido";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Data_Pedido";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "Estoque";
-            this.dataGridViewTextBoxColumn30.HeaderText = "Estoque";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn31.HeaderText = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "Quant_Usada";
-            this.dataGridViewTextBoxColumn32.HeaderText = "Quant_Usada";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            // 
-            // tblToluenoBindingSource2
-            // 
-            this.tblToluenoBindingSource2.DataMember = "tblTolueno";
-            this.tblToluenoBindingSource2.DataSource = this.bDProdutosQuimicosDataSet;
             // 
             // tabPage5
             // 
@@ -926,106 +630,24 @@ namespace ControleProdutosQuimicos
             this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22});
-            this.dataGridView5.DataSource = this.tblAcetonaBindingSource1;
+            this.dataGridViewTextBoxColumn144,
+            this.dataGridViewTextBoxColumn145,
+            this.dataGridViewTextBoxColumn146,
+            this.dataGridViewTextBoxColumn147,
+            this.dataGridViewTextBoxColumn148,
+            this.dataGridViewTextBoxColumn149,
+            this.dataGridViewTextBoxColumn150,
+            this.dataGridViewTextBoxColumn151,
+            this.dataGridViewTextBoxColumn152,
+            this.dataGridViewTextBoxColumn153,
+            this.dataGridViewTextBoxColumn154});
+            this.dataGridView5.DataSource = this.tblAcetonaBindingSource3;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(3, 3);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView5.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn12.HeaderText = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Produto";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Desenho";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Desenho";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Numero_NF";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Numero_NF";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Data_Pedido";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Data_Pedido";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Estoque";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Estoque";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Quant_Usada";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Quant_Usada";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // tblAcetonaBindingSource1
-            // 
-            this.tblAcetonaBindingSource1.DataMember = "tblAcetona";
-            this.tblAcetonaBindingSource1.DataSource = this.bDProdutosQuimicosDataSet;
             // 
             // tabPage6
             // 
@@ -1046,18 +668,18 @@ namespace ControleProdutosQuimicos
             this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44});
-            this.dataGridView6.DataSource = this.tblMetiletilcetonaBindingSource2;
+            this.dataGridViewTextBoxColumn155,
+            this.dataGridViewTextBoxColumn156,
+            this.dataGridViewTextBoxColumn157,
+            this.dataGridViewTextBoxColumn158,
+            this.dataGridViewTextBoxColumn159,
+            this.dataGridViewTextBoxColumn160,
+            this.dataGridViewTextBoxColumn161,
+            this.dataGridViewTextBoxColumn162,
+            this.dataGridViewTextBoxColumn163,
+            this.dataGridViewTextBoxColumn164,
+            this.dataGridViewTextBoxColumn165});
+            this.dataGridView6.DataSource = this.tblMetiletilcetonaBindingSource4;
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView6.Location = new System.Drawing.Point(3, 3);
             this.dataGridView6.Name = "dataGridView6";
@@ -1065,87 +687,25 @@ namespace ControleProdutosQuimicos
             this.dataGridView6.Size = new System.Drawing.Size(1116, 244);
             this.dataGridView6.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn34
+            // tblAcidoSulfuricoBindingSource2
             // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn34.HeaderText = "IdProdutosQuimicos";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.tblAcidoSulfuricoBindingSource2.DataMember = "tblAcidoSulfurico";
             // 
-            // dataGridViewTextBoxColumn35
+            // tblHidroxidoPostasioBindingSource3
             // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "Produto";
-            this.dataGridViewTextBoxColumn35.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.tblHidroxidoPostasioBindingSource3.DataMember = "tblHidroxidoPostasio";
             // 
-            // dataGridViewTextBoxColumn36
+            // tblToluenoBindingSource2
             // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "Desenho";
-            this.dataGridViewTextBoxColumn36.HeaderText = "Desenho";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.tblToluenoBindingSource2.DataMember = "tblTolueno";
             // 
-            // dataGridViewTextBoxColumn37
+            // tblAcetonaBindingSource1
             // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "Numero_NF";
-            this.dataGridViewTextBoxColumn37.HeaderText = "Numero_NF";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn38.HeaderText = "Data_Emissao_NF";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn39.HeaderText = "Numero_Pedido";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "Data_Pedido";
-            this.dataGridViewTextBoxColumn40.HeaderText = "Data_Pedido";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "Estoque";
-            this.dataGridViewTextBoxColumn41.HeaderText = "Estoque";
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.DataPropertyName = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn42.HeaderText = "Quant_Comprada";
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            this.dataGridViewTextBoxColumn42.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DataPropertyName = "Quant_Usada";
-            this.dataGridViewTextBoxColumn43.HeaderText = "Quant_Usada";
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.DataPropertyName = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn44.HeaderText = "Usuario_Logado";
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            this.tblAcetonaBindingSource1.DataMember = "tblAcetona";
             // 
             // tblMetiletilcetonaBindingSource2
             // 
             this.tblMetiletilcetonaBindingSource2.DataMember = "tblMetiletilcetona";
-            this.tblMetiletilcetonaBindingSource2.DataSource = this.bDProdutosQuimicosDataSet;
             // 
             // Cx_Item
             // 
@@ -1202,44 +762,563 @@ namespace ControleProdutosQuimicos
             this.Cx_Usuario_Logado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Cx_Usuario_Logado.TextChanged += new System.EventHandler(this.Cx_Usuario_Logado_TextChanged);
             // 
+            // tblHidroxidoPostasioBindingSource1
+            // 
+            this.tblHidroxidoPostasioBindingSource1.DataMember = "tblHidroxidoPostasio";
+            // 
+            // tblHidroxidoPostasioBindingSource2
+            // 
+            this.tblHidroxidoPostasioBindingSource2.DataMember = "tblHidroxidoPostasio";
+            // 
+            // tblToluenoBindingSource1
+            // 
+            this.tblToluenoBindingSource1.DataMember = "tblTolueno";
+            // 
+            // bdAcidoCloridrico
+            // 
+            this.bdAcidoCloridrico.DataSetName = "BdAcidoCloridrico";
+            this.bdAcidoCloridrico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblAcidoCloridricoBindingSource5
+            // 
+            this.tblAcidoCloridricoBindingSource5.DataMember = "tblAcidoCloridrico";
+            this.tblAcidoCloridricoBindingSource5.DataSource = this.bdAcidoCloridrico;
+            // 
             // tblAcidoCloridricoTableAdapter
             // 
             this.tblAcidoCloridricoTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn100
+            // 
+            this.dataGridViewTextBoxColumn100.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn100.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn100.Name = "dataGridViewTextBoxColumn100";
+            this.dataGridViewTextBoxColumn100.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn101
+            // 
+            this.dataGridViewTextBoxColumn101.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn101.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn101.Name = "dataGridViewTextBoxColumn101";
+            this.dataGridViewTextBoxColumn101.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn102
+            // 
+            this.dataGridViewTextBoxColumn102.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn102.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn102.Name = "dataGridViewTextBoxColumn102";
+            this.dataGridViewTextBoxColumn102.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn103
+            // 
+            this.dataGridViewTextBoxColumn103.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn103.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn103.Name = "dataGridViewTextBoxColumn103";
+            this.dataGridViewTextBoxColumn103.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn104
+            // 
+            this.dataGridViewTextBoxColumn104.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn104.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn104.Name = "dataGridViewTextBoxColumn104";
+            this.dataGridViewTextBoxColumn104.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn105
+            // 
+            this.dataGridViewTextBoxColumn105.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn105.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn105.Name = "dataGridViewTextBoxColumn105";
+            this.dataGridViewTextBoxColumn105.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn106
+            // 
+            this.dataGridViewTextBoxColumn106.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn106.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn106.Name = "dataGridViewTextBoxColumn106";
+            this.dataGridViewTextBoxColumn106.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn107
+            // 
+            this.dataGridViewTextBoxColumn107.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn107.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn107.Name = "dataGridViewTextBoxColumn107";
+            this.dataGridViewTextBoxColumn107.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn108
+            // 
+            this.dataGridViewTextBoxColumn108.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn108.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn108.Name = "dataGridViewTextBoxColumn108";
+            this.dataGridViewTextBoxColumn108.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn109
+            // 
+            this.dataGridViewTextBoxColumn109.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn109.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn109.Name = "dataGridViewTextBoxColumn109";
+            this.dataGridViewTextBoxColumn109.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn110
+            // 
+            this.dataGridViewTextBoxColumn110.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn110.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn110.Name = "dataGridViewTextBoxColumn110";
+            this.dataGridViewTextBoxColumn110.ReadOnly = true;
+            // 
+            // bdAcidoSulfurico
+            // 
+            this.bdAcidoSulfurico.DataSetName = "BdAcidoSulfurico";
+            this.bdAcidoSulfurico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblAcidoSulfuricoBindingSource4
+            // 
+            this.tblAcidoSulfuricoBindingSource4.DataMember = "tblAcidoSulfurico";
+            this.tblAcidoSulfuricoBindingSource4.DataSource = this.bdAcidoSulfurico;
             // 
             // tblAcidoSulfuricoTableAdapter
             // 
             this.tblAcidoSulfuricoTableAdapter.ClearBeforeFill = true;
             // 
-            // tblHidroxidoPostasioBindingSource1
+            // dataGridViewTextBoxColumn111
             // 
-            this.tblHidroxidoPostasioBindingSource1.DataMember = "tblHidroxidoPostasio";
-            this.tblHidroxidoPostasioBindingSource1.DataSource = this.bDProdutosQuimicosDataSet;
+            this.dataGridViewTextBoxColumn111.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn111.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn111.Name = "dataGridViewTextBoxColumn111";
+            this.dataGridViewTextBoxColumn111.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn112
+            // 
+            this.dataGridViewTextBoxColumn112.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn112.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn112.Name = "dataGridViewTextBoxColumn112";
+            this.dataGridViewTextBoxColumn112.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn113
+            // 
+            this.dataGridViewTextBoxColumn113.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn113.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn113.Name = "dataGridViewTextBoxColumn113";
+            this.dataGridViewTextBoxColumn113.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn114
+            // 
+            this.dataGridViewTextBoxColumn114.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn114.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn114.Name = "dataGridViewTextBoxColumn114";
+            this.dataGridViewTextBoxColumn114.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn115
+            // 
+            this.dataGridViewTextBoxColumn115.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn115.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn115.Name = "dataGridViewTextBoxColumn115";
+            this.dataGridViewTextBoxColumn115.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn116
+            // 
+            this.dataGridViewTextBoxColumn116.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn116.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn116.Name = "dataGridViewTextBoxColumn116";
+            this.dataGridViewTextBoxColumn116.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn117
+            // 
+            this.dataGridViewTextBoxColumn117.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn117.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn117.Name = "dataGridViewTextBoxColumn117";
+            this.dataGridViewTextBoxColumn117.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn118
+            // 
+            this.dataGridViewTextBoxColumn118.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn118.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn118.Name = "dataGridViewTextBoxColumn118";
+            this.dataGridViewTextBoxColumn118.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn119
+            // 
+            this.dataGridViewTextBoxColumn119.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn119.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn119.Name = "dataGridViewTextBoxColumn119";
+            this.dataGridViewTextBoxColumn119.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn120
+            // 
+            this.dataGridViewTextBoxColumn120.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn120.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn120.Name = "dataGridViewTextBoxColumn120";
+            this.dataGridViewTextBoxColumn120.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn121
+            // 
+            this.dataGridViewTextBoxColumn121.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn121.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn121.Name = "dataGridViewTextBoxColumn121";
+            this.dataGridViewTextBoxColumn121.ReadOnly = true;
+            // 
+            // bdHidroxidoPostasio
+            // 
+            this.bdHidroxidoPostasio.DataSetName = "BdHidroxidoPostasio";
+            this.bdHidroxidoPostasio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHidroxidoPostasioBindingSource5
+            // 
+            this.tblHidroxidoPostasioBindingSource5.DataMember = "tblHidroxidoPostasio";
+            this.tblHidroxidoPostasioBindingSource5.DataSource = this.bdHidroxidoPostasio;
             // 
             // tblHidroxidoPostasioTableAdapter
             // 
             this.tblHidroxidoPostasioTableAdapter.ClearBeforeFill = true;
             // 
-            // tblHidroxidoPostasioBindingSource2
+            // dataGridViewTextBoxColumn122
             // 
-            this.tblHidroxidoPostasioBindingSource2.DataMember = "tblHidroxidoPostasio";
-            this.tblHidroxidoPostasioBindingSource2.DataSource = this.bDProdutosQuimicosDataSet;
+            this.dataGridViewTextBoxColumn122.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn122.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn122.Name = "dataGridViewTextBoxColumn122";
+            this.dataGridViewTextBoxColumn122.ReadOnly = true;
             // 
-            // tblToluenoBindingSource1
+            // dataGridViewTextBoxColumn123
             // 
-            this.tblToluenoBindingSource1.DataMember = "tblTolueno";
-            this.tblToluenoBindingSource1.DataSource = this.bDProdutosQuimicosDataSet;
+            this.dataGridViewTextBoxColumn123.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn123.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn123.Name = "dataGridViewTextBoxColumn123";
+            this.dataGridViewTextBoxColumn123.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn124
+            // 
+            this.dataGridViewTextBoxColumn124.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn124.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn124.Name = "dataGridViewTextBoxColumn124";
+            this.dataGridViewTextBoxColumn124.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn125
+            // 
+            this.dataGridViewTextBoxColumn125.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn125.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn125.Name = "dataGridViewTextBoxColumn125";
+            this.dataGridViewTextBoxColumn125.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn126
+            // 
+            this.dataGridViewTextBoxColumn126.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn126.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn126.Name = "dataGridViewTextBoxColumn126";
+            this.dataGridViewTextBoxColumn126.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn127
+            // 
+            this.dataGridViewTextBoxColumn127.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn127.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn127.Name = "dataGridViewTextBoxColumn127";
+            this.dataGridViewTextBoxColumn127.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn128
+            // 
+            this.dataGridViewTextBoxColumn128.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn128.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn128.Name = "dataGridViewTextBoxColumn128";
+            this.dataGridViewTextBoxColumn128.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn129
+            // 
+            this.dataGridViewTextBoxColumn129.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn129.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn129.Name = "dataGridViewTextBoxColumn129";
+            this.dataGridViewTextBoxColumn129.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn130
+            // 
+            this.dataGridViewTextBoxColumn130.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn130.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn130.Name = "dataGridViewTextBoxColumn130";
+            this.dataGridViewTextBoxColumn130.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn131
+            // 
+            this.dataGridViewTextBoxColumn131.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn131.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn131.Name = "dataGridViewTextBoxColumn131";
+            this.dataGridViewTextBoxColumn131.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn132
+            // 
+            this.dataGridViewTextBoxColumn132.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn132.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn132.Name = "dataGridViewTextBoxColumn132";
+            this.dataGridViewTextBoxColumn132.ReadOnly = true;
+            // 
+            // bdTolueno
+            // 
+            this.bdTolueno.DataSetName = "BdTolueno";
+            this.bdTolueno.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblToluenoBindingSource4
+            // 
+            this.tblToluenoBindingSource4.DataMember = "tblTolueno";
+            this.tblToluenoBindingSource4.DataSource = this.bdTolueno;
             // 
             // tblToluenoTableAdapter
             // 
             this.tblToluenoTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridViewTextBoxColumn133
+            // 
+            this.dataGridViewTextBoxColumn133.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn133.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn133.Name = "dataGridViewTextBoxColumn133";
+            this.dataGridViewTextBoxColumn133.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn134
+            // 
+            this.dataGridViewTextBoxColumn134.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn134.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn134.Name = "dataGridViewTextBoxColumn134";
+            this.dataGridViewTextBoxColumn134.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn135
+            // 
+            this.dataGridViewTextBoxColumn135.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn135.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn135.Name = "dataGridViewTextBoxColumn135";
+            this.dataGridViewTextBoxColumn135.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn136
+            // 
+            this.dataGridViewTextBoxColumn136.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn136.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn136.Name = "dataGridViewTextBoxColumn136";
+            this.dataGridViewTextBoxColumn136.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn137
+            // 
+            this.dataGridViewTextBoxColumn137.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn137.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn137.Name = "dataGridViewTextBoxColumn137";
+            this.dataGridViewTextBoxColumn137.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn138
+            // 
+            this.dataGridViewTextBoxColumn138.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn138.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn138.Name = "dataGridViewTextBoxColumn138";
+            this.dataGridViewTextBoxColumn138.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn139
+            // 
+            this.dataGridViewTextBoxColumn139.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn139.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn139.Name = "dataGridViewTextBoxColumn139";
+            this.dataGridViewTextBoxColumn139.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn140
+            // 
+            this.dataGridViewTextBoxColumn140.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn140.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn140.Name = "dataGridViewTextBoxColumn140";
+            this.dataGridViewTextBoxColumn140.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn141
+            // 
+            this.dataGridViewTextBoxColumn141.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn141.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn141.Name = "dataGridViewTextBoxColumn141";
+            this.dataGridViewTextBoxColumn141.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn142
+            // 
+            this.dataGridViewTextBoxColumn142.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn142.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn142.Name = "dataGridViewTextBoxColumn142";
+            this.dataGridViewTextBoxColumn142.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn143
+            // 
+            this.dataGridViewTextBoxColumn143.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn143.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn143.Name = "dataGridViewTextBoxColumn143";
+            this.dataGridViewTextBoxColumn143.ReadOnly = true;
+            // 
+            // bdAcetona
+            // 
+            this.bdAcetona.DataSetName = "BdAcetona";
+            this.bdAcetona.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblAcetonaBindingSource3
+            // 
+            this.tblAcetonaBindingSource3.DataMember = "tblAcetona";
+            this.tblAcetonaBindingSource3.DataSource = this.bdAcetona;
+            // 
             // tblAcetonaTableAdapter
             // 
             this.tblAcetonaTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridViewTextBoxColumn144
+            // 
+            this.dataGridViewTextBoxColumn144.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn144.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn144.Name = "dataGridViewTextBoxColumn144";
+            this.dataGridViewTextBoxColumn144.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn145
+            // 
+            this.dataGridViewTextBoxColumn145.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn145.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn145.Name = "dataGridViewTextBoxColumn145";
+            this.dataGridViewTextBoxColumn145.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn146
+            // 
+            this.dataGridViewTextBoxColumn146.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn146.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn146.Name = "dataGridViewTextBoxColumn146";
+            this.dataGridViewTextBoxColumn146.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn147
+            // 
+            this.dataGridViewTextBoxColumn147.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn147.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn147.Name = "dataGridViewTextBoxColumn147";
+            this.dataGridViewTextBoxColumn147.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn148
+            // 
+            this.dataGridViewTextBoxColumn148.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn148.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn148.Name = "dataGridViewTextBoxColumn148";
+            this.dataGridViewTextBoxColumn148.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn149
+            // 
+            this.dataGridViewTextBoxColumn149.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn149.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn149.Name = "dataGridViewTextBoxColumn149";
+            this.dataGridViewTextBoxColumn149.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn150
+            // 
+            this.dataGridViewTextBoxColumn150.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn150.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn150.Name = "dataGridViewTextBoxColumn150";
+            this.dataGridViewTextBoxColumn150.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn151
+            // 
+            this.dataGridViewTextBoxColumn151.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn151.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn151.Name = "dataGridViewTextBoxColumn151";
+            this.dataGridViewTextBoxColumn151.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn152
+            // 
+            this.dataGridViewTextBoxColumn152.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn152.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn152.Name = "dataGridViewTextBoxColumn152";
+            this.dataGridViewTextBoxColumn152.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn153
+            // 
+            this.dataGridViewTextBoxColumn153.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn153.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn153.Name = "dataGridViewTextBoxColumn153";
+            this.dataGridViewTextBoxColumn153.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn154
+            // 
+            this.dataGridViewTextBoxColumn154.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn154.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn154.Name = "dataGridViewTextBoxColumn154";
+            this.dataGridViewTextBoxColumn154.ReadOnly = true;
+            // 
+            // bdMetiletilcetona
+            // 
+            this.bdMetiletilcetona.DataSetName = "BdMetiletilcetona";
+            this.bdMetiletilcetona.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMetiletilcetonaBindingSource4
+            // 
+            this.tblMetiletilcetonaBindingSource4.DataMember = "tblMetiletilcetona";
+            this.tblMetiletilcetonaBindingSource4.DataSource = this.bdMetiletilcetona;
+            // 
             // tblMetiletilcetonaTableAdapter
             // 
             this.tblMetiletilcetonaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn155
+            // 
+            this.dataGridViewTextBoxColumn155.DataPropertyName = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn155.HeaderText = "IdProdutosQuimicos";
+            this.dataGridViewTextBoxColumn155.Name = "dataGridViewTextBoxColumn155";
+            this.dataGridViewTextBoxColumn155.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn156
+            // 
+            this.dataGridViewTextBoxColumn156.DataPropertyName = "Produto";
+            this.dataGridViewTextBoxColumn156.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn156.Name = "dataGridViewTextBoxColumn156";
+            this.dataGridViewTextBoxColumn156.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn157
+            // 
+            this.dataGridViewTextBoxColumn157.DataPropertyName = "Desenho";
+            this.dataGridViewTextBoxColumn157.HeaderText = "Desenho";
+            this.dataGridViewTextBoxColumn157.Name = "dataGridViewTextBoxColumn157";
+            this.dataGridViewTextBoxColumn157.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn158
+            // 
+            this.dataGridViewTextBoxColumn158.DataPropertyName = "Numero_NF";
+            this.dataGridViewTextBoxColumn158.HeaderText = "Numero_NF";
+            this.dataGridViewTextBoxColumn158.Name = "dataGridViewTextBoxColumn158";
+            this.dataGridViewTextBoxColumn158.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn159
+            // 
+            this.dataGridViewTextBoxColumn159.DataPropertyName = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn159.HeaderText = "Data_Emissao_NF";
+            this.dataGridViewTextBoxColumn159.Name = "dataGridViewTextBoxColumn159";
+            this.dataGridViewTextBoxColumn159.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn160
+            // 
+            this.dataGridViewTextBoxColumn160.DataPropertyName = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn160.HeaderText = "Numero_Pedido";
+            this.dataGridViewTextBoxColumn160.Name = "dataGridViewTextBoxColumn160";
+            this.dataGridViewTextBoxColumn160.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn161
+            // 
+            this.dataGridViewTextBoxColumn161.DataPropertyName = "Data_Pedido";
+            this.dataGridViewTextBoxColumn161.HeaderText = "Data_Pedido";
+            this.dataGridViewTextBoxColumn161.Name = "dataGridViewTextBoxColumn161";
+            this.dataGridViewTextBoxColumn161.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn162
+            // 
+            this.dataGridViewTextBoxColumn162.DataPropertyName = "Estoque";
+            this.dataGridViewTextBoxColumn162.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn162.Name = "dataGridViewTextBoxColumn162";
+            this.dataGridViewTextBoxColumn162.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn163
+            // 
+            this.dataGridViewTextBoxColumn163.DataPropertyName = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn163.HeaderText = "Quant_Comprada";
+            this.dataGridViewTextBoxColumn163.Name = "dataGridViewTextBoxColumn163";
+            this.dataGridViewTextBoxColumn163.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn164
+            // 
+            this.dataGridViewTextBoxColumn164.DataPropertyName = "Quant_Usada";
+            this.dataGridViewTextBoxColumn164.HeaderText = "Quant_Usada";
+            this.dataGridViewTextBoxColumn164.Name = "dataGridViewTextBoxColumn164";
+            this.dataGridViewTextBoxColumn164.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn165
+            // 
+            this.dataGridViewTextBoxColumn165.DataPropertyName = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn165.HeaderText = "Usuario_Logado";
+            this.dataGridViewTextBoxColumn165.Name = "dataGridViewTextBoxColumn165";
+            this.dataGridViewTextBoxColumn165.ReadOnly = true;
             // 
             // frm_Cadastro
             // 
@@ -1279,21 +1358,25 @@ namespace ControleProdutosQuimicos
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDProdutosQuimicosDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource3)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource3)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource2)).EndInit();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource)).EndInit();
@@ -1308,6 +1391,19 @@ namespace ControleProdutosQuimicos
             ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcidoCloridrico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoCloridricoBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcidoSulfurico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcidoSulfuricoBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdHidroxidoPostasio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHidroxidoPostasioBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdTolueno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblToluenoBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdAcetona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAcetonaBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdMetiletilcetona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMetiletilcetonaBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1355,9 +1451,7 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.BindingSource tblAcetonaBindingSource;
         private System.Windows.Forms.BindingSource tblAcidoSulfuricoBindingSource1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private BDProdutosQuimicosDataSet bDProdutosQuimicosDataSet;
         private System.Windows.Forms.BindingSource tblAcidoCloridricoBindingSource3;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoCloridricoTableAdapter tblAcidoCloridricoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdutosQuimicosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn desenhoDataGridViewTextBoxColumn;
@@ -1382,10 +1476,8 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.BindingSource tblAcidoSulfuricoBindingSource2;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcidoSulfuricoTableAdapter tblAcidoSulfuricoTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource1;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblHidroxidoPostasioTableAdapter tblHidroxidoPostasioTableAdapter;
         private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -1400,7 +1492,6 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.BindingSource tblToluenoBindingSource1;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblToluenoTableAdapter tblToluenoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdutosQuimicosDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn produtoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn desenhoDataGridViewTextBoxColumn1;
@@ -1427,7 +1518,6 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.BindingSource tblAcetonaBindingSource1;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblAcetonaTableAdapter tblAcetonaTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
@@ -1441,6 +1531,150 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.BindingSource tblMetiletilcetonaBindingSource2;
-        private BancosBD.BDProdutosQuimicosDataSetTableAdapters.tblMetiletilcetonaTableAdapter tblMetiletilcetonaTableAdapter;
+        private System.Windows.Forms.BindingSource tblAcidoSulfuricoBindingSource3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
+        private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn63;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
+        private System.Windows.Forms.BindingSource tblToluenoBindingSource3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn70;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn71;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn72;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn73;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn76;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn77;
+        private System.Windows.Forms.BindingSource tblAcetonaBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn78;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn86;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
+        private System.Windows.Forms.BindingSource tblMetiletilcetonaBindingSource3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn89;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn91;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn92;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn93;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn94;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn95;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn96;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn97;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn98;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn99;
+        private System.Windows.Forms.BindingSource tblAcidoCloridricoBindingSource4;
+        private BancosBD.BdAcidoCloridrico bdAcidoCloridrico;
+        private System.Windows.Forms.BindingSource tblAcidoCloridricoBindingSource5;
+        private BancosBD.BdAcidoCloridricoTableAdapters.tblAcidoCloridricoTableAdapter tblAcidoCloridricoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn100;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn101;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn102;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn103;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn104;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn105;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn106;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn107;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn108;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn109;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn110;
+        private BancosBD.BdAcidoSulfurico bdAcidoSulfurico;
+        private System.Windows.Forms.BindingSource tblAcidoSulfuricoBindingSource4;
+        private BancosBD.BdAcidoSulfuricoTableAdapters.tblAcidoSulfuricoTableAdapter tblAcidoSulfuricoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn111;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn112;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn113;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn114;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn115;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn116;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn117;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn118;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn119;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn120;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn121;
+        private BancosBD.BdHidroxidoPostasio bdHidroxidoPostasio;
+        private System.Windows.Forms.BindingSource tblHidroxidoPostasioBindingSource5;
+        private BancosBD.BdHidroxidoPostasioTableAdapters.tblHidroxidoPostasioTableAdapter tblHidroxidoPostasioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn122;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn123;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn124;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn125;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn126;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn127;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn128;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn129;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn130;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn131;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn132;
+        private BancosBD.BdTolueno bdTolueno;
+        private System.Windows.Forms.BindingSource tblToluenoBindingSource4;
+        private BancosBD.BdToluenoTableAdapters.tblToluenoTableAdapter tblToluenoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn133;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn134;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn135;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn136;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn137;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn138;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn139;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn140;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn141;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn142;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn143;
+        private BancosBD.BdAcetona bdAcetona;
+        private System.Windows.Forms.BindingSource tblAcetonaBindingSource3;
+        private BancosBD.BdAcetonaTableAdapters.tblAcetonaTableAdapter tblAcetonaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn144;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn145;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn146;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn147;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn148;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn149;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn150;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn151;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn152;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn153;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn154;
+        private BancosBD.BdMetiletilcetona bdMetiletilcetona;
+        private System.Windows.Forms.BindingSource tblMetiletilcetonaBindingSource4;
+        private BancosBD.BdMetiletilcetonaTableAdapters.tblMetiletilcetonaTableAdapter tblMetiletilcetonaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn155;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn156;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn157;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn158;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn159;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn160;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn161;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn162;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn163;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn164;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn165;
     }
 }
