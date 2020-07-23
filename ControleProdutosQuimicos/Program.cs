@@ -14,6 +14,9 @@ namespace ControleProdutosQuimicos
         /// </summary>
         public static string Usuariologado;
         public static string CxProduto;
+        public static string Cx_ExclusaoProduto;
+        public static string Cx_ExclusaoRegistro;
+
         [STAThread]
 
         static void Main()

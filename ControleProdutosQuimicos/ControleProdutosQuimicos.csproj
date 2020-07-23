@@ -91,6 +91,12 @@
     <Compile Include="Apresentação\Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentação\ExclusaoRegistroBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\ExclusaoRegistroBD.Designer.cs">
+      <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentação\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BdTolueno.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BDPQServerTSEA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPQServerTSEA.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conexões\Conexao.cs" />
     <Compile Include="Conexões\LoginDalComandos.cs" />
     <Compile Include="Modelo\Controle.cs" />
@@ -146,6 +157,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Apresentação\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\ExclusaoRegistroBD.resx">
+      <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentação\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -231,8 +245,17 @@
     <None Include="BancosBD\BdTolueno.xss">
       <DependentUpon>BdTolueno.xsd</DependentUpon>
     </None>
-    <None Include="ControleProdutosQuimicos_1_TemporaryKey.pfx" />
-    <None Include="ControleProdutosQuimicos_TemporaryKey.pfx" />
+    <None Include="BDPQServerTSEA.xsc">
+      <DependentUpon>BDPQServerTSEA.xsd</DependentUpon>
+    </None>
+    <None Include="BDPQServerTSEA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPQServerTSEA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPQServerTSEA.xss">
+      <DependentUpon>BDPQServerTSEA.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

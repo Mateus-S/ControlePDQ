@@ -43,5 +43,15 @@ namespace ControleProdutosQuimicos.Properties {
                 return ((string)(this["BDPQConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MATEUS_SA\\SQLEXPRESS;Initial Catalog=BDPQ;Integrated Security=True")]
+        public string BDServerEmpresa {
+            get {
+                return ((string)(this["BDServerEmpresa"]));
+            }
+        }
     }
 }

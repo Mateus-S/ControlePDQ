@@ -17,7 +17,7 @@ namespace ControleProdutosQuimicos
     public partial class frm_Cadastro : MetroFramework.Forms.MetroForm
 
     {
-        
+
         float QuantidadeCompra = 0, QuantidadeUtilizada = 0;
 
         public frm_Cadastro()
@@ -37,14 +37,14 @@ namespace ControleProdutosQuimicos
 
             int ValorEstoqueAtual = logindal.ValorAtualEstoque();
             string Resultado = "";
-            MessageBox.Show("Esse é o valor Atual do Estoque\n"+ Convert.ToString(ValorEstoqueAtual));
+            MessageBox.Show("Esse é o valor Atual do Estoque\n" + Convert.ToString(ValorEstoqueAtual));
 
 
             DateTime DataEmissaonf = new DateTime();
             DataEmissaonf = Cx_Data_Emissao_NF.Value;
             DateTime DataPedido = new DateTime();
             DataPedido = Cx_Data_Pedido.Value;
-            if(Cx_Quant_Compra.Text == "")
+            if (Cx_Quant_Compra.Text == "")
             {
                 Cx_Quant_Compra.Text = "0";
             }
@@ -52,14 +52,14 @@ namespace ControleProdutosQuimicos
             {
                 Cx_Quant_Usada.Text = "0";
             }
-                
+
             QuantidadeCompra = float.Parse(Cx_Quant_Compra.Text);
             QuantidadeUtilizada = float.Parse(Cx_Quant_Usada.Text);
             if (ValorEstoqueAtual != 0)
             {
                 if (Cx_Quant_Compra.Text == "0")
                 {
-                    float Estoque = ValorEstoqueAtual  - QuantidadeUtilizada;
+                    float Estoque = ValorEstoqueAtual - QuantidadeUtilizada;
                     Resultado = Convert.ToString(Estoque);
                     MessageBox.Show(Resultado);
                 }
@@ -70,7 +70,7 @@ namespace ControleProdutosQuimicos
                     MessageBox.Show(Resultado);
 
                 }
-               
+
             }
             else
             {
@@ -78,7 +78,7 @@ namespace ControleProdutosQuimicos
                 Resultado = Convert.ToString(Estoque);
                 MessageBox.Show(Resultado);
             }
-          
+
 
             Controle controle = new Controle();
             String mensagem = controle.CadastrarProduto(Cx_Produto.Text, Cx_Item.Text, Cx_Numero_NF.Text, Cx_Pedido_Compra.Text, Cx_Quant_Compra.Text, Cx_Quant_Usada.Text,
@@ -94,7 +94,7 @@ namespace ControleProdutosQuimicos
             }
 
             else
-            
+
             {
                 MessageBox.Show(controle.mensagem);
             }
@@ -108,21 +108,23 @@ namespace ControleProdutosQuimicos
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bdMetiletilcetona.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblMetiletilcetonaTableAdapter.Fill(this.bdMetiletilcetona.tblMetiletilcetona);
-            // TODO: esta linha de código carrega dados na tabela 'bdAcetona.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcetonaTableAdapter.Fill(this.bdAcetona.tblAcetona);
-            // TODO: esta linha de código carrega dados na tabela 'bdTolueno.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblToluenoTableAdapter.Fill(this.bdTolueno.tblTolueno);
-            // TODO: esta linha de código carrega dados na tabela 'bdHidroxidoPostasio.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblHidroxidoPostasioTableAdapter.Fill(this.bdHidroxidoPostasio.tblHidroxidoPostasio);
-            // TODO: esta linha de código carrega dados na tabela 'bdAcidoSulfurico.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoSulfuricoTableAdapter.Fill(this.bdAcidoSulfurico.tblAcidoSulfurico);
-            // TODO: esta linha de código carrega dados na tabela 'bdAcidoCloridrico.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoCloridricoTableAdapter.Fill(this.bdAcidoCloridrico.tblAcidoCloridrico);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblMetiletilcetonaTableAdapter.Fill(this.bDPQServerTSEA.tblMetiletilcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcetonaTableAdapter.Fill(this.bDPQServerTSEA.tblAcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblToluenoTableAdapter.Fill(this.bDPQServerTSEA.tblTolueno);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQServerTSEA.tblHidroxidoPostasio);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoSulfuricoTableAdapter.Fill(this.bDPQServerTSEA.tblAcidoSulfurico);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoCloridricoTableAdapter.Fill(this.bDPQServerTSEA.tblAcidoCloridrico);
+
+
 
             Cx_Usuario_Logado.Text = Program.Usuariologado;
-                  
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -166,7 +168,7 @@ namespace ControleProdutosQuimicos
         {
             try
             {
-            
+
             }
             catch (System.Exception ex)
             {
@@ -183,7 +185,7 @@ namespace ControleProdutosQuimicos
             {
                 Cx_Item.Text = "N4981917P012";
                 tab_Produtos.SelectTab(0);
-                               
+
             }
             else if (Cx_Produto.Text == "Ácido Sulfúrico")
             {
@@ -226,19 +228,26 @@ namespace ControleProdutosQuimicos
 
         }
 
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void BotaoLimparDados_Click(object sender, EventArgs e)
         {
-           string v = Convert.ToString(dataGridView1);
-            MessageBox.Show(v);
+
+            MessageBox.Show("Digite qual o registro que deseja excluir","Atenção",
+                                MessageBoxButtons.OK,MessageBoxIcon.Question);
+            frm_ExclusaoRegistroBD Exclusao = new frm_ExclusaoRegistroBD();
+            Exclusao.Show();
+            
+
 
         }
 
-        private void tblAcidoCloridricoBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
 
-        }
 
-      
+
     }
 }
 
