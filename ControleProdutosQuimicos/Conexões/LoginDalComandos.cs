@@ -92,7 +92,7 @@ namespace ControleProdutosQuimicos.DAL
         }
         public string CadastrarProduto(String Produto, String Desenho, String Numero_NF,
                                        String Numero_Pedido, String Quant_Comprada, String Quant_Usada,
-                                       String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, string Resultado)
+                                       String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, DateTime Data_lancamento, string Resultado)
         {
             // comandos para inserir aqui o que vai cadastrar no banco retornando uma string informando se deu certo ou se houve algum erro.
             tem = false;
@@ -102,8 +102,8 @@ namespace ControleProdutosQuimicos.DAL
                 {
                     ;
                     cmd.CommandText = "insert into tblAcidoCloridrico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -113,13 +113,14 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Ácido Sulfúrico"))
                 {
                     cmd.CommandText = "insert into tblAcidoSulfurico (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                  "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                  "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -129,13 +130,14 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Hidróxido De Potássio"))
                 {
                     cmd.CommandText = "insert into tblHidroxidoPostasio (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                 "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                 "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -145,13 +147,14 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Tolueno"))
                 {
                     cmd.CommandText = "insert into tblTolueno (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                   "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                   "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -161,13 +164,14 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Acetona"))
                 {
                     cmd.CommandText = "insert into tblAcetona (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                  "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                  "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -177,13 +181,14 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
                 else if ((Program.CxProduto == "Metiletilcetona"))
                 {
                     cmd.CommandText = "insert into tblMetiletilcetona (Produto, Desenho, Numero_NF, Numero_Pedido, " +
-                                  "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Estoque) " +
-                                  "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@rs);";
+                                      "Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido , Data_Emissao_NF, Data_Lancamento, Estoque) " +
+                                      "values (@p,@d,@nf,@np,@qc,@qu,@ul,@den,@dp,@dl,@rs);";
                     cmd.Parameters.AddWithValue("@p", Produto);
                     cmd.Parameters.AddWithValue("@d", Desenho);
                     cmd.Parameters.AddWithValue("@nf", Numero_NF);
@@ -193,6 +198,7 @@ namespace ControleProdutosQuimicos.DAL
                     cmd.Parameters.AddWithValue("@ul", Usuario_Logado);
                     cmd.Parameters.AddWithValue("@den", Data_Pedido);
                     cmd.Parameters.AddWithValue("@dp", Data_Emissao_NF);
+                    cmd.Parameters.AddWithValue("@dl", Data_lancamento);
                     cmd.Parameters.AddWithValue("@rs", Resultado);
                 }
 

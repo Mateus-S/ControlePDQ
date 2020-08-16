@@ -1,16 +1,10 @@
 ﻿using ControleProdutosQuimicos.Apresentação;
 using ControleProdutosQuimicos.Modelo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ControleProdutosQuimicos.DAL;
-
+using Microsoft.Office.Interop.Excel;
+using System.Collections.Generic;
 
 namespace ControleProdutosQuimicos
 {
@@ -19,9 +13,11 @@ namespace ControleProdutosQuimicos
     {
 
         float QuantidadeCompra = 0, QuantidadeUtilizada = 0;
+        DataGridView tabela;
+
 
         public frm_Cadastro()
-
+            
 
         {
 
@@ -44,6 +40,9 @@ namespace ControleProdutosQuimicos
             DataEmissaonf = Cx_Data_Emissao_NF.Value;
             DateTime DataPedido = new DateTime();
             DataPedido = Cx_Data_Pedido.Value;
+
+            DateTime Data_Lancamento = DateTime.Now;
+                
             if (Cx_Quant_Compra.Text == "")
             {
                 Cx_Quant_Compra.Text = "0";
@@ -82,7 +81,7 @@ namespace ControleProdutosQuimicos
 
             Controle controle = new Controle();
             String mensagem = controle.CadastrarProduto(Cx_Produto.Text, Cx_Item.Text, Cx_Numero_NF.Text, Cx_Pedido_Compra.Text, Cx_Quant_Compra.Text, Cx_Quant_Usada.Text,
-                Cx_Usuario_Logado.Text, DataEmissaonf, DataPedido, Resultado);
+                Cx_Usuario_Logado.Text, DataEmissaonf, DataPedido, Data_Lancamento, Resultado);
 
 
 
@@ -108,21 +107,20 @@ namespace ControleProdutosQuimicos
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblMetiletilcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblMetiletilcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblAcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblToluenoTableAdapter1.Fill(this.bDPQDataSethome.tblTolueno);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblHidroxidoPostasioTableAdapter1.Fill(this.bDPQDataSethome.tblHidroxidoPostasio);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoSulfuricoTableAdapter1.Fill(this.bDPQDataSethome.tblAcidoSulfurico);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoCloridricoTableAdapter1.Fill(this.bDPQDataSethome.tblAcidoCloridrico);
             // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblMetiletilcetonaTableAdapter.Fill(this.bDPQServerTSEA.tblMetiletilcetona);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcetonaTableAdapter.Fill(this.bDPQServerTSEA.tblAcetona);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblToluenoTableAdapter.Fill(this.bDPQServerTSEA.tblTolueno);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQServerTSEA.tblHidroxidoPostasio);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoSulfuricoTableAdapter.Fill(this.bDPQServerTSEA.tblAcidoSulfurico);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoCloridricoTableAdapter.Fill(this.bDPQServerTSEA.tblAcidoCloridrico);
-
-
-
+        
             Cx_Usuario_Logado.Text = Program.Usuariologado;
 
         }
@@ -233,6 +231,50 @@ namespace ControleProdutosQuimicos
 
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Relatorio_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Será gerado o arquivo referente ao que estiver selecionado", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Question);
+            Controle controle = new Controle();
+            string conteudo = Cx_Produto.Text;
+            if (conteudo == "Ácido Cloridrico")
+            {
+                tabela = dataGridView1;
+
+            } 
+            else if (conteudo == "Ácido Sulfúrico")
+            {
+                tabela = dataGridView2;
+
+            }
+            else if (conteudo == "Hidróxido De Potássio")
+            {
+                tabela = dataGridView3;
+
+            }
+            else if (conteudo == "Tolueno")
+            {
+                tabela = dataGridView4;
+
+            }
+            else if (conteudo == "Acetona")
+            {
+                tabela = dataGridView5;
+
+            }
+            else
+            {
+                tabela = dataGridView6;
+            }
+            controle.ExportarDados(tabela);
+
+        }
+
         private void BotaoLimparDados_Click(object sender, EventArgs e)
         {
 
@@ -245,9 +287,7 @@ namespace ControleProdutosQuimicos
 
         }
 
-
-
-
+     
     }
 }
 

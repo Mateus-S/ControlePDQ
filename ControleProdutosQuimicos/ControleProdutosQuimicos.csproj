@@ -72,6 +72,10 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,6 +100,12 @@
     </Compile>
     <Compile Include="Apresentação\ExclusaoRegistroBD.Designer.cs">
       <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentação\ExportarExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentação\ExportarExcel.Designer.cs">
+      <DependentUpon>ExportarExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentação\Login.cs">
       <SubType>Form</SubType>
@@ -145,6 +155,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BdTolueno.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BDPQDataSethome.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPQDataSethome.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BDPQServerTSEA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentação\ExclusaoRegistroBD.resx">
       <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentação\ExportarExcel.resx">
+      <DependentUpon>ExportarExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentação\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -244,6 +262,17 @@
     </None>
     <None Include="BancosBD\BdTolueno.xss">
       <DependentUpon>BdTolueno.xsd</DependentUpon>
+    </None>
+    <None Include="BDPQDataSethome.xsc">
+      <DependentUpon>BDPQDataSethome.xsd</DependentUpon>
+    </None>
+    <None Include="BDPQDataSethome.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPQDataSethome.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPQDataSethome.xss">
+      <DependentUpon>BDPQDataSethome.xsd</DependentUpon>
     </None>
     <None Include="BDPQServerTSEA.xsc">
       <DependentUpon>BDPQServerTSEA.xsd</DependentUpon>
