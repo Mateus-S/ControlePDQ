@@ -738,7 +738,7 @@ namespace ControleProdutosQuimicos {
                 this.columnIdProdutosQuimicos.ReadOnly = true;
                 this.columnIdProdutosQuimicos.Unique = true;
                 this.columnProduto.AllowDBNull = false;
-                this.columnProduto.MaxLength = 15;
+                this.columnProduto.MaxLength = 30;
                 this.columnDesenho.AllowDBNull = false;
                 this.columnDesenho.MaxLength = 15;
                 this.columnNumero_NF.AllowDBNull = false;
@@ -1582,7 +1582,7 @@ namespace ControleProdutosQuimicos {
                 this.columnIdProdutosQuimicos.ReadOnly = true;
                 this.columnIdProdutosQuimicos.Unique = true;
                 this.columnProduto.AllowDBNull = false;
-                this.columnProduto.MaxLength = 15;
+                this.columnProduto.MaxLength = 30;
                 this.columnDesenho.AllowDBNull = false;
                 this.columnDesenho.MaxLength = 15;
                 this.columnNumero_NF.AllowDBNull = false;
@@ -2004,7 +2004,7 @@ namespace ControleProdutosQuimicos {
                 this.columnIdProdutosQuimicos.ReadOnly = true;
                 this.columnIdProdutosQuimicos.Unique = true;
                 this.columnProduto.AllowDBNull = false;
-                this.columnProduto.MaxLength = 15;
+                this.columnProduto.MaxLength = 30;
                 this.columnDesenho.AllowDBNull = false;
                 this.columnDesenho.MaxLength = 15;
                 this.columnNumero_NF.AllowDBNull = false;
@@ -2426,7 +2426,7 @@ namespace ControleProdutosQuimicos {
                 this.columnIdProdutosQuimicos.ReadOnly = true;
                 this.columnIdProdutosQuimicos.Unique = true;
                 this.columnProduto.AllowDBNull = false;
-                this.columnProduto.MaxLength = 15;
+                this.columnProduto.MaxLength = 30;
                 this.columnDesenho.AllowDBNull = false;
                 this.columnDesenho.MaxLength = 15;
                 this.columnNumero_NF.AllowDBNull = false;
@@ -2848,7 +2848,7 @@ namespace ControleProdutosQuimicos {
                 this.columnIdProdutosQuimicos.ReadOnly = true;
                 this.columnIdProdutosQuimicos.Unique = true;
                 this.columnProduto.AllowDBNull = false;
-                this.columnProduto.MaxLength = 15;
+                this.columnProduto.MaxLength = 30;
                 this.columnDesenho.AllowDBNull = false;
                 this.columnDesenho.MaxLength = 15;
                 this.columnNumero_NF.AllowDBNull = false;

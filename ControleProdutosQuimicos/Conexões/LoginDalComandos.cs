@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ControleProdutosQuimicos.Apresentação;
-
+using ControleProdutosQuimicos.Modelo;
 
 namespace ControleProdutosQuimicos.DAL
 {
@@ -17,6 +17,7 @@ namespace ControleProdutosQuimicos.DAL
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
         SqlDataReader dr;
+
 
 
         public bool VerificarLogin(string Usuario, string Senha)
@@ -90,9 +91,7 @@ namespace ControleProdutosQuimicos.DAL
 
             return mensagem;
         }
-        public string CadastrarProduto(String Produto, String Desenho, String Numero_NF,
-                                       String Numero_Pedido, String Quant_Comprada, String Quant_Usada,
-                                       String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, DateTime Data_lancamento, string Resultado)
+        public string CadastrarProduto(String Produto, String Desenho, String Numero_NF, String Numero_Pedido, String Quant_Comprada, String Quant_Usada, String Usuario_Logado, DateTime Data_Pedido, DateTime Data_Emissao_NF, DateTime Data_lancamento, string Resultado)
         {
             // comandos para inserir aqui o que vai cadastrar no banco retornando uma string informando se deu certo ou se houve algum erro.
             tem = false;
@@ -217,6 +216,7 @@ namespace ControleProdutosQuimicos.DAL
                 {
                     this.mensagem = Ex.Message;
                 }
+                Controle controle = new Controle();
 
             }
 
@@ -327,124 +327,116 @@ namespace ControleProdutosQuimicos.DAL
             tem = true;
             return EstoqueTotal;
         }
-        public string ExluirDados()
+        public string ExluirDados(int id, string name)
         {
-            // comandos para deletar registros na tabela.
-            tem = false;
+          
+        // comandos para deletar registros na tabela.
+        tem = false;
 
-            if (Program.Cx_ExclusaoProduto == "Ácido Cloridrico")
+            switch (name)
             {
+                case "Ácido Cloridrico":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblAcidocloridrico WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblAcidocloridrico WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
+                    }
 
-                }
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
+                    break;
+                case "Ácido Sulfurico":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblAcidoSulfurico WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-            }
-            else if (Program.Cx_ExclusaoProduto == "Ácido Sulfúrico")
-            {
+                    }
 
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblAcidoSulfurico WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-                }
+                    break;
+                case "Hidróxido De Potássio":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblHidroxidoPostasio WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
+                    }
 
-            }
-            else if (Program.Cx_ExclusaoProduto == "Hidróxido De Potássio")
-            {
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblHidroxidoPostasio WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
+                    break;
+                case "Tolueno":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblTolueno WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-                }
+                    }
 
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-            }
-            else if (Program.Cx_ExclusaoProduto == "Tolueno")
-            {
+                    break;
+                case "Acetona":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblAcetona WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblTolueno WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
+                    }
 
-                }
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
+                    break;
+                case "Metiletilcetona":
+                    try
+                    {
+                        cmd.Connection = con.Conectar();
+                        cmd.CommandText = " DELETE from tblMetiletilcetona WHERE IdProdutosQuimicos = " + id;
+                        cmd.ExecuteNonQuery();
+                        mensagem = "Deletado com Sucesso";
+                        tem = true;
 
-            }
-            else if (Program.Cx_ExclusaoProduto == "Acetona")
-            {
+                    }
 
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblAcetona WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
+                    catch (SqlException)
+                    {
+                        mensagem = "Erro com o Banco de dados";
+                    }
 
-                }
-
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
-
-            }
-            else if (Program.Cx_ExclusaoProduto == "Metiletilcetona")
-            {
-
-                try
-                {
-                    cmd.Connection = con.Conectar();
-                    cmd.CommandText = " DELETE from tblMetiletilcetona WHERE IdProdutosQuimicos = " + Program.Cx_ExclusaoRegistro;
-                    cmd.ExecuteNonQuery();
-                    this.mensagem = "Deletado com Sucesso";
-                    tem = true;
-
-                }
-
-                catch (SqlException)
-                {
-                    this.mensagem = "Erro com o Banco de dados";
-                }
-
+                    break;
             }
 
             return mensagem;

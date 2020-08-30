@@ -693,14 +693,14 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
   <xs:element name="BDPQDataSethome" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDPQDataSethome" msprop:Generator_UserDSName="BDPQDataSethome">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblAcetona" msprop:Generator_TableClassName="tblAcetonaDataTable" msprop:Generator_TableVarName="tabletblAcetona" msprop:Generator_TablePropName="tblAcetona" msprop:Generator_RowDeletingName="tblAcetonaRowDeleting" msprop:Generator_RowChangingName="tblAcetonaRowChanging" msprop:Generator_RowEvHandlerName="tblAcetonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcetonaRowDeleted" msprop:Generator_UserTableName="tblAcetona" msprop:Generator_RowChangedName="tblAcetonaRowChanged" msprop:Generator_RowEvArgName="tblAcetonaRowChangeEvent" msprop:Generator_RowClassName="tblAcetonaRow">
+        <xs:element name="tblAcetona" msprop:Generator_TableClassName="tblAcetonaDataTable" msprop:Generator_TableVarName="tabletblAcetona" msprop:Generator_RowChangedName="tblAcetonaRowChanged" msprop:Generator_TablePropName="tblAcetona" msprop:Generator_RowDeletingName="tblAcetonaRowDeleting" msprop:Generator_RowChangingName="tblAcetonaRowChanging" msprop:Generator_RowEvHandlerName="tblAcetonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcetonaRowDeleted" msprop:Generator_RowClassName="tblAcetonaRow" msprop:Generator_UserTableName="tblAcetona" msprop:Generator_RowEvArgName="tblAcetonaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
               <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -729,7 +729,7 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblAcidoCloridrico" msprop:Generator_TableClassName="tblAcidoCloridricoDataTable" msprop:Generator_TableVarName="tabletblAcidoCloridrico" msprop:Generator_TablePropName="tblAcidoCloridrico" msprop:Generator_RowDeletingName="tblAcidoCloridricoRowDeleting" msprop:Generator_RowChangingName="tblAcidoCloridricoRowChanging" msprop:Generator_RowEvHandlerName="tblAcidoCloridricoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcidoCloridricoRowDeleted" msprop:Generator_UserTableName="tblAcidoCloridrico" msprop:Generator_RowChangedName="tblAcidoCloridricoRowChanged" msprop:Generator_RowEvArgName="tblAcidoCloridricoRowChangeEvent" msprop:Generator_RowClassName="tblAcidoCloridricoRow">
+        <xs:element name="tblAcidoCloridrico" msprop:Generator_TableClassName="tblAcidoCloridricoDataTable" msprop:Generator_TableVarName="tabletblAcidoCloridrico" msprop:Generator_RowChangedName="tblAcidoCloridricoRowChanged" msprop:Generator_TablePropName="tblAcidoCloridrico" msprop:Generator_RowDeletingName="tblAcidoCloridricoRowDeleting" msprop:Generator_RowChangingName="tblAcidoCloridricoRowChanging" msprop:Generator_RowEvHandlerName="tblAcidoCloridricoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcidoCloridricoRowDeleted" msprop:Generator_RowClassName="tblAcidoCloridricoRow" msprop:Generator_UserTableName="tblAcidoCloridrico" msprop:Generator_RowEvArgName="tblAcidoCloridricoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
@@ -765,14 +765,14 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblAcidoSulfurico" msprop:Generator_TableClassName="tblAcidoSulfuricoDataTable" msprop:Generator_TableVarName="tabletblAcidoSulfurico" msprop:Generator_TablePropName="tblAcidoSulfurico" msprop:Generator_RowDeletingName="tblAcidoSulfuricoRowDeleting" msprop:Generator_RowChangingName="tblAcidoSulfuricoRowChanging" msprop:Generator_RowEvHandlerName="tblAcidoSulfuricoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcidoSulfuricoRowDeleted" msprop:Generator_UserTableName="tblAcidoSulfurico" msprop:Generator_RowChangedName="tblAcidoSulfuricoRowChanged" msprop:Generator_RowEvArgName="tblAcidoSulfuricoRowChangeEvent" msprop:Generator_RowClassName="tblAcidoSulfuricoRow">
+        <xs:element name="tblAcidoSulfurico" msprop:Generator_TableClassName="tblAcidoSulfuricoDataTable" msprop:Generator_TableVarName="tabletblAcidoSulfurico" msprop:Generator_RowChangedName="tblAcidoSulfuricoRowChanged" msprop:Generator_TablePropName="tblAcidoSulfurico" msprop:Generator_RowDeletingName="tblAcidoSulfuricoRowDeleting" msprop:Generator_RowChangingName="tblAcidoSulfuricoRowChanging" msprop:Generator_RowEvHandlerName="tblAcidoSulfuricoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblAcidoSulfuricoRowDeleted" msprop:Generator_RowClassName="tblAcidoSulfuricoRow" msprop:Generator_UserTableName="tblAcidoSulfurico" msprop:Generator_RowEvArgName="tblAcidoSulfuricoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
               <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -801,14 +801,14 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblHidroxidoPostasio" msprop:Generator_TableClassName="tblHidroxidoPostasioDataTable" msprop:Generator_TableVarName="tabletblHidroxidoPostasio" msprop:Generator_TablePropName="tblHidroxidoPostasio" msprop:Generator_RowDeletingName="tblHidroxidoPostasioRowDeleting" msprop:Generator_RowChangingName="tblHidroxidoPostasioRowChanging" msprop:Generator_RowEvHandlerName="tblHidroxidoPostasioRowChangeEventHandler" msprop:Generator_RowDeletedName="tblHidroxidoPostasioRowDeleted" msprop:Generator_UserTableName="tblHidroxidoPostasio" msprop:Generator_RowChangedName="tblHidroxidoPostasioRowChanged" msprop:Generator_RowEvArgName="tblHidroxidoPostasioRowChangeEvent" msprop:Generator_RowClassName="tblHidroxidoPostasioRow">
+        <xs:element name="tblHidroxidoPostasio" msprop:Generator_TableClassName="tblHidroxidoPostasioDataTable" msprop:Generator_TableVarName="tabletblHidroxidoPostasio" msprop:Generator_RowChangedName="tblHidroxidoPostasioRowChanged" msprop:Generator_TablePropName="tblHidroxidoPostasio" msprop:Generator_RowDeletingName="tblHidroxidoPostasioRowDeleting" msprop:Generator_RowChangingName="tblHidroxidoPostasioRowChanging" msprop:Generator_RowEvHandlerName="tblHidroxidoPostasioRowChangeEventHandler" msprop:Generator_RowDeletedName="tblHidroxidoPostasioRowDeleted" msprop:Generator_RowClassName="tblHidroxidoPostasioRow" msprop:Generator_UserTableName="tblHidroxidoPostasio" msprop:Generator_RowEvArgName="tblHidroxidoPostasioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
               <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -837,14 +837,14 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblMetiletilcetona" msprop:Generator_TableClassName="tblMetiletilcetonaDataTable" msprop:Generator_TableVarName="tabletblMetiletilcetona" msprop:Generator_TablePropName="tblMetiletilcetona" msprop:Generator_RowDeletingName="tblMetiletilcetonaRowDeleting" msprop:Generator_RowChangingName="tblMetiletilcetonaRowChanging" msprop:Generator_RowEvHandlerName="tblMetiletilcetonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMetiletilcetonaRowDeleted" msprop:Generator_UserTableName="tblMetiletilcetona" msprop:Generator_RowChangedName="tblMetiletilcetonaRowChanged" msprop:Generator_RowEvArgName="tblMetiletilcetonaRowChangeEvent" msprop:Generator_RowClassName="tblMetiletilcetonaRow">
+        <xs:element name="tblMetiletilcetona" msprop:Generator_TableClassName="tblMetiletilcetonaDataTable" msprop:Generator_TableVarName="tabletblMetiletilcetona" msprop:Generator_RowChangedName="tblMetiletilcetonaRowChanged" msprop:Generator_TablePropName="tblMetiletilcetona" msprop:Generator_RowDeletingName="tblMetiletilcetonaRowDeleting" msprop:Generator_RowChangingName="tblMetiletilcetonaRowChanging" msprop:Generator_RowEvHandlerName="tblMetiletilcetonaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblMetiletilcetonaRowDeleted" msprop:Generator_RowClassName="tblMetiletilcetonaRow" msprop:Generator_UserTableName="tblMetiletilcetona" msprop:Generator_RowEvArgName="tblMetiletilcetonaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
               <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -873,14 +873,14 @@ SELECT IdProdutosQuimicos, Produto, Desenho, Numero_NF, Data_Emissao_NF, Numero_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tblTolueno" msprop:Generator_TableClassName="tblToluenoDataTable" msprop:Generator_TableVarName="tabletblTolueno" msprop:Generator_TablePropName="tblTolueno" msprop:Generator_RowDeletingName="tblToluenoRowDeleting" msprop:Generator_RowChangingName="tblToluenoRowChanging" msprop:Generator_RowEvHandlerName="tblToluenoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblToluenoRowDeleted" msprop:Generator_UserTableName="tblTolueno" msprop:Generator_RowChangedName="tblToluenoRowChanged" msprop:Generator_RowEvArgName="tblToluenoRowChangeEvent" msprop:Generator_RowClassName="tblToluenoRow">
+        <xs:element name="tblTolueno" msprop:Generator_TableClassName="tblToluenoDataTable" msprop:Generator_TableVarName="tabletblTolueno" msprop:Generator_RowChangedName="tblToluenoRowChanged" msprop:Generator_TablePropName="tblTolueno" msprop:Generator_RowDeletingName="tblToluenoRowDeleting" msprop:Generator_RowChangingName="tblToluenoRowChanging" msprop:Generator_RowEvHandlerName="tblToluenoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblToluenoRowDeleted" msprop:Generator_RowClassName="tblToluenoRow" msprop:Generator_UserTableName="tblTolueno" msprop:Generator_RowEvArgName="tblToluenoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdProdutosQuimicos" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProdutosQuimicos" msprop:Generator_ColumnPropNameInRow="IdProdutosQuimicos" msprop:Generator_ColumnPropNameInTable="IdProdutosQuimicosColumn" msprop:Generator_UserColumnName="IdProdutosQuimicos" type="xs:int" />
               <xs:element name="Produto" msprop:Generator_ColumnVarNameInTable="columnProduto" msprop:Generator_ColumnPropNameInRow="Produto" msprop:Generator_ColumnPropNameInTable="ProdutoColumn" msprop:Generator_UserColumnName="Produto">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

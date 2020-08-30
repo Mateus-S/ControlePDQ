@@ -42,8 +42,7 @@ namespace ControleProdutosQuimicos.Modelo
             }
             return mensagem;
             }
-        public string CadastrarProduto(String Produto, String Desenho, String Numero_NF, String Numero_Pedido, String Quant_Comprada,
-            String Quant_Usada, String Usuario_Logado, DateTime Data_Emissao_NF, DateTime Data_Pedido, DateTime Data_Lancamento, string Resultado)
+        public string CadastrarProduto(String Produto, String Desenho, String Numero_NF, String Numero_Pedido, String Quant_Comprada, String Quant_Usada, String Usuario_Logado, DateTime Data_Emissao_NF, DateTime Data_Pedido, DateTime Data_Lancamento, string Resultado)
         {
           
             LoginDalComandos cadprod = new LoginDalComandos();
@@ -92,7 +91,24 @@ namespace ControleProdutosQuimicos.Modelo
 
         }
 
+        public void AtualizarDados()
+        {
+            frm_Cadastro cad = new frm_Cadastro();
+            List<BindingSource> bdglist = new List<BindingSource>();
 
+            bdglist.Add(cad.bdgAcidoCloridrico);
+            bdglist.Add(cad.bdgAcidoSulfurico);
+            bdglist.Add(cad.bdgHidroxidoPostasio);
+            bdglist.Add(cad.bdgMetiletilcetona);
+            bdglist.Add(cad.bdgAcetona);
+            bdglist.Add(cad.bdgTolueno);
+
+            foreach (BindingSource item in bdglist)
+            {
+                item.ResetBindings(false);
+
+            }
+        }
 
     }
 }

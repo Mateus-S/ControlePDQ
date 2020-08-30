@@ -3,15 +3,18 @@ using ControleProdutosQuimicos.Modelo;
 using System;
 using System.Windows.Forms;
 using ControleProdutosQuimicos.DAL;
-using Microsoft.Office.Interop.Excel;
+using System.Globalization;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Data;
+using Microsoft.Office.Interop.Excel;
 
 namespace ControleProdutosQuimicos
 {
     public partial class frm_Cadastro : MetroFramework.Forms.MetroForm
 
     {
-
+        
         float QuantidadeCompra = 0, QuantidadeUtilizada = 0;
         DataGridView tabela;
 
@@ -41,7 +44,7 @@ namespace ControleProdutosQuimicos
             DateTime DataPedido = new DateTime();
             DataPedido = Cx_Data_Pedido.Value;
 
-            DateTime Data_Lancamento = DateTime.Now;
+            DateTime Data_Lancamento = DateTime.Today;
                 
             if (Cx_Quant_Compra.Text == "")
             {
@@ -97,24 +100,22 @@ namespace ControleProdutosQuimicos
             {
                 MessageBox.Show(controle.mensagem);
             }
-
+            this.Close();
             frm_Cadastro cadastro = new frm_Cadastro();
-
             cadastro.Show();
 
-            this.Close();
         }
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQDataSethome.tblHidroxidoPostasio);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
             this.tblMetiletilcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblMetiletilcetona);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
             this.tblAcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblAcetona);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
             this.tblToluenoTableAdapter1.Fill(this.bDPQDataSethome.tblTolueno);
-            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblHidroxidoPostasioTableAdapter1.Fill(this.bDPQDataSethome.tblHidroxidoPostasio);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
             this.tblAcidoSulfuricoTableAdapter1.Fill(this.bDPQDataSethome.tblAcidoSulfurico);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
@@ -122,11 +123,6 @@ namespace ControleProdutosQuimicos
             // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
         
             Cx_Usuario_Logado.Text = Program.Usuariologado;
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -138,42 +134,11 @@ namespace ControleProdutosQuimicos
 
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        public void Cx_Usuario_Logado_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void fillByToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
 
 
         public void Cx_Produto_SelectedIndexChanged(object sender, EventArgs e)
@@ -220,74 +185,94 @@ namespace ControleProdutosQuimicos
             Program.CxProduto = Cx_Produto.Text;
         }
 
-
-        private void Cx_Item_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_Relatorio_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Será gerado o arquivo referente ao que estiver selecionado", "Atenção",
-                    MessageBoxButtons.OK, MessageBoxIcon.Question);
-            Controle controle = new Controle();
-            string conteudo = Cx_Produto.Text;
-            if (conteudo == "Ácido Cloridrico")
+            foreach (Control item in tab_Produtos.SelectedTab.Controls)
             {
-                tabela = dataGridView1;
-
-            } 
-            else if (conteudo == "Ácido Sulfúrico")
-            {
-                tabela = dataGridView2;
-
+                if (item is DataGridView)
+                {
+                    tabela = (DataGridView)item;
+                }
             }
-            else if (conteudo == "Hidróxido De Potássio")
+            if (MessageBox.Show("Será gerado o arquivo referente ao que estiver selecionado", "Atenção",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                tabela = dataGridView3;
+                Controle controle = new Controle();
 
+                controle.ExportarDados(tabela);
             }
-            else if (conteudo == "Tolueno")
-            {
-                tabela = dataGridView4;
-
-            }
-            else if (conteudo == "Acetona")
-            {
-                tabela = dataGridView5;
-
-            }
-            else
-            {
-                tabela = dataGridView6;
-            }
-            controle.ExportarDados(tabela);
-
         }
+
+        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+        }
+        private void dataGridView2_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+
+        }   
+        private void dataGridView3_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+
+        }   
+        private void dataGridView4_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+         }
+        private void dataGridView5_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+        }
+        private void dataGridView6_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+
+        {
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados((int)e.Row.Cells[0].Value, tab_Produtos.SelectedTab.Text);
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+        }
+
 
         private void BotaoLimparDados_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Digite qual o registro que deseja excluir","Atenção",
-                                MessageBoxButtons.OK,MessageBoxIcon.Question);
-            frm_ExclusaoRegistroBD Exclusao = new frm_ExclusaoRegistroBD();
-            Exclusao.Show();
-            
+            int line = dataGridView1.Columns[0].Index;
+            LoginDalComandos comandos = new LoginDalComandos();
+            comandos.ExluirDados(line, tab_Produtos.SelectedTab.Text);
 
 
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+            MessageBox.Show("Digite qual o registro que deseja excluir","Atenção", MessageBoxButtons.OK,MessageBoxIcon.Question);
+
+            /*
+              frm_ExclusaoRegistroBD Exclusao = new frm_ExclusaoRegistroBD();
+              Exclusao.Show();
+              */
         }
 
-     
+
+        
+
+
     }
 }
 

@@ -37,7 +37,7 @@ namespace ControleProdutosQuimicos.Apresentação
             if (MessageBox.Show("Você tem certeza que deseja Excluir esse registro?", "Atenção",
                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                comandos.ExluirDados();
+                comandos.ExluirDados(int.Parse(Cx_ExclusaoRegistro.Text), Cx_ExclusaoProduto.Text);
                 frm_Cadastro cadastro = new frm_Cadastro();
 
                 cadastro.Show();

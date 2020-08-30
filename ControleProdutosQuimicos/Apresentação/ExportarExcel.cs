@@ -7,6 +7,8 @@ namespace ControleProdutosQuimicos.Apresentação
 {
     public partial class frm_ExportarExcel : MetroFramework.Forms.MetroForm
     {
+        System.Windows.Forms.DataGridView dados;
+
         public frm_ExportarExcel()
         {
             InitializeComponent();
@@ -22,6 +24,9 @@ namespace ControleProdutosQuimicos.Apresentação
             Controle controle = new Controle();
             frm_Cadastro cadastro = new frm_Cadastro();
 
+            dados = cadastro.dataGridView1;
+
+            controle.ExportarDados(dados);
 
         }
     }
