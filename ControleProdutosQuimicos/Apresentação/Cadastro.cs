@@ -100,9 +100,9 @@ namespace ControleProdutosQuimicos
             {
                 MessageBox.Show(controle.mensagem);
             }
-            this.Close();
+            /*this.Close();
             frm_Cadastro cadastro = new frm_Cadastro();
-            cadastro.Show();
+            cadastro.Show();*/
 
         }
 
@@ -251,13 +251,31 @@ namespace ControleProdutosQuimicos
             controle.AtualizarDados();
         }
 
+        private void dataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+
+            Controle controle = new Controle();
+            controle.AtualizarDados();
+        }
 
         private void BotaoLimparDados_Click(object sender, EventArgs e)
         {
-            int line = dataGridView1.Columns[0].Index;
-            LoginDalComandos comandos = new LoginDalComandos();
-            comandos.ExluirDados(line, tab_Produtos.SelectedTab.Text);
 
+            List<int> dataGrids = new List<int>();
+
+            dataGrids.Add((int)dataGridView1.Rows[0].Cells[0].Value);
+            dataGrids.Add((int)dataGridView2.Rows[0].Cells[0].Value);
+            dataGrids.Add((int)dataGridView3.Rows[0].Cells[0].Value);
+            dataGrids.Add((int)dataGridView4.Rows[0].Cells[0].Value);
+            dataGrids.Add((int)dataGridView5.Rows[0].Cells[0].Value);
+            dataGrids.Add((int)dataGridView6.Rows[0].Cells[0].Value);
+
+            foreach (int id in dataGrids)
+            {
+                LoginDalComandos comandos = new LoginDalComandos();
+                comandos.ExluirDados(int.Parse(id.ToString()), tab_Produtos.SelectedTab.Text);
+
+            }
 
             Controle controle = new Controle();
             controle.AtualizarDados();
