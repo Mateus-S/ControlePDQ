@@ -95,12 +95,6 @@
     <Compile Include="Apresentação\Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentação\ExclusaoRegistroBD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Apresentação\ExclusaoRegistroBD.Designer.cs">
-      <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
-    </Compile>
     <Compile Include="Apresentação\ExportarExcel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Apresentação\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Apresentação\ExclusaoRegistroBD.resx">
-      <DependentUpon>ExclusaoRegistroBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentação\ExportarExcel.resx">
       <DependentUpon>ExportarExcel.cs</DependentUpon>

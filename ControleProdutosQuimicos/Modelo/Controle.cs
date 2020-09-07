@@ -1,12 +1,7 @@
 ﻿using ControleProdutosQuimicos.DAL;
-using Microsoft.Office.Tools.Excel.Controls;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Office.Interop.Excel;
 using DataGridView = System.Windows.Forms.DataGridView;
 
 namespace ControleProdutosQuimicos.Modelo
@@ -15,7 +10,7 @@ namespace ControleProdutosQuimicos.Modelo
     {
         public bool tem;
         public string mensagem = "", logado;
-   
+
         public bool Acessar(String Usuario, String Senha)
         {
 
@@ -91,24 +86,7 @@ namespace ControleProdutosQuimicos.Modelo
 
         }
 
-        public void AtualizarDados()
-        {
-            frm_Cadastro cad = new frm_Cadastro();
-            List<BindingSource> bdglist = new List<BindingSource>();
 
-            bdglist.Add(cad.bdgAcidoCloridrico);
-            bdglist.Add(cad.bdgAcidoSulfurico);
-            bdglist.Add(cad.bdgHidroxidoPostasio);
-            bdglist.Add(cad.bdgMetiletilcetona);
-            bdglist.Add(cad.bdgAcetona);
-            bdglist.Add(cad.bdgTolueno);
-
-            foreach (BindingSource item in bdglist)
-            {
-                item.ResetBindings(false);
-
-            }
-        }
 
     }
 }

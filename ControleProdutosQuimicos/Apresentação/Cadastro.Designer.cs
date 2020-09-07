@@ -153,6 +153,8 @@ namespace ControleProdutosQuimicos
             this.tblMetiletilcetonaTableAdapter1 = new ControleProdutosQuimicos.BDPQDataSethomeTableAdapters.tblMetiletilcetonaTableAdapter();
             this.btn_Relatorio = new System.Windows.Forms.Button();
             this.tblHidroxidoPostasioTableAdapter = new ControleProdutosQuimicos.BDPQDataSethomeTableAdapters.tblHidroxidoPostasioTableAdapter();
+            this.bDPQServerTSEA = new ControleProdutosQuimicos.BDPQServerTSEA();
+            this.bDPQServerTSEABindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tab_Produtos.SuspendLayout();
@@ -175,6 +177,8 @@ namespace ControleProdutosQuimicos
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgMetiletilcetona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPQServerTSEA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPQServerTSEABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProduto
@@ -443,7 +447,6 @@ namespace ControleProdutosQuimicos
             this.dataGridView1.Size = new System.Drawing.Size(1103, 244);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Tag = "";
-            this.dataGridView1.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserAddedRow);
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // dataGridViewTextBoxColumn166
@@ -1355,6 +1358,16 @@ namespace ControleProdutosQuimicos
             // 
             this.tblHidroxidoPostasioTableAdapter.ClearBeforeFill = true;
             // 
+            // bDPQServerTSEA
+            // 
+            this.bDPQServerTSEA.DataSetName = "BDPQServerTSEA";
+            this.bDPQServerTSEA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bDPQServerTSEABindingSource
+            // 
+            this.bDPQServerTSEABindingSource.DataSource = this.bDPQServerTSEA;
+            this.bDPQServerTSEABindingSource.Position = 0;
+            // 
             // frm_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1412,6 +1425,8 @@ namespace ControleProdutosQuimicos
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgMetiletilcetona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPQServerTSEA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPQServerTSEABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1733,5 +1748,7 @@ namespace ControleProdutosQuimicos
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn186;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn187;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLancamentoDataGridViewTextBoxColumn1;
+        private BDPQServerTSEA bDPQServerTSEA;
+        private System.Windows.Forms.BindingSource bDPQServerTSEABindingSource;
     }
 }

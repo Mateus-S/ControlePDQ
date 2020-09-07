@@ -14,6 +14,7 @@ namespace ControleProdutosQuimicos.DAL
         public bool tem = false;
         public string mensagem = "";
         public int EstoqueTotal;
+        public string ResultadoFinal;
         SqlCommand cmd = new SqlCommand();
         Conexao con = new Conexao();
         SqlDataReader dr;
@@ -53,8 +54,6 @@ namespace ControleProdutosQuimicos.DAL
             return tem;
 
         }
-
-
         public string CadastrarUsuarios(String Novo_Usuario, String Nova_Senha, String ConfSenha)
         {
             // comandos para inserir aqui o que vai cadastrar no banco retornando uma string informando se deu certo ou se houve algum erro.
@@ -223,225 +222,75 @@ namespace ControleProdutosQuimicos.DAL
 
             return mensagem;
         }
-
-        public int ValorAtualEstoque()
+        public string ExluirDados(int id, string table)
         {
 
-            if (Program.CxProduto == "Ácido Cloridrico")
+            // comandos para deletar registros na tabela.
+            tem = false;
+
+
+            try
             {
                 cmd.Connection = con.Conectar();
-                cmd.CommandText = " SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcidocloridrico";
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-
-            }
-            else if (Program.CxProduto == "Ácido Sulfúrico")
-            {
-                cmd.Connection = con.Conectar();
-                cmd.CommandText = " SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcidoSulfurico";
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-            }
-            else if (Program.CxProduto == "Hidróxido De Potássio")
-            {
-                cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT SUM (Estoque) - SUM (Quant_Usada) from tblHidroxidoPostasio";
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-            }
-            else if (Program.CxProduto == "Tolueno")
-            {
-                cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada)  from tblTolueno";
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-            }
-            else if (Program.CxProduto == "Acetona")
-            {
-                cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblAcetona";
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-            }
-            else if (Program.CxProduto == "Metiletilcetona")
-            {
-                cmd.Connection = con.Conectar();
-                cmd.CommandText = "SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from tblMetiletilcetona";
-
-                try
-                {
-                    var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
-                    EstoqueTotal = Convert.ToInt32(VerificaEstque);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
+                cmd.CommandText = $" DELETE from {table} WHERE IdProdutosQuimicos = " + id;
+                cmd.ExecuteNonQuery();
+                mensagem = "Deletado com Sucesso";
+                tem = true;
 
             }
 
+            catch (SqlException)
+            {
+                mensagem = "Erro com o Banco de dados";
+            }
+
+
+            return mensagem;
+        }
+        public int ValorAtualEstoque(string table)
+        {
+
+            cmd.Connection = con.Conectar();
+            cmd.CommandText = $" SELECT SUM (Quant_Comprada) - SUM (Quant_Usada) from {table}";
+            try
+            {
+                var VerificaEstque = Convert.ToInt32(cmd.ExecuteScalar());
+                EstoqueTotal = Convert.ToInt32(VerificaEstque);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             con.desconectar();
             this.mensagem = "Cadastrado com Sucesso";
             tem = true;
             return EstoqueTotal;
         }
-        public string ExluirDados(int id, string name)
+        public string Estoque(float quantComprada, float quantUsada, float estoqueAtual)
         {
-          
-        // comandos para deletar registros na tabela.
-        tem = false;
-
-            switch (name)
+            if (estoqueAtual != 0)
             {
-                case "Ácido Cloridrico":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblAcidocloridrico WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
+                if (quantComprada == 0)
+                {
+                    float Estoque = estoqueAtual - quantUsada;
+                    ResultadoFinal = Convert.ToString(Estoque);
 
-                    }
+                }
+                else
+                {
+                    float Estoque = (estoqueAtual + quantComprada) - quantUsada;
+                    ResultadoFinal = Convert.ToString(Estoque);
 
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
+                }
 
-                    break;
-                case "Ácido Sulfurico":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblAcidoSulfurico WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
-
-                    }
-
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
-
-                    break;
-                case "Hidróxido De Potássio":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblHidroxidoPostasio WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
-
-                    }
-
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
-
-                    break;
-                case "Tolueno":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblTolueno WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
-
-                    }
-
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
-
-                    break;
-                case "Acetona":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblAcetona WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
-
-                    }
-
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
-
-                    break;
-                case "Metiletilcetona":
-                    try
-                    {
-                        cmd.Connection = con.Conectar();
-                        cmd.CommandText = " DELETE from tblMetiletilcetona WHERE IdProdutosQuimicos = " + id;
-                        cmd.ExecuteNonQuery();
-                        mensagem = "Deletado com Sucesso";
-                        tem = true;
-
-                    }
-
-                    catch (SqlException)
-                    {
-                        mensagem = "Erro com o Banco de dados";
-                    }
-
-                    break;
             }
-
-            return mensagem;
+            else
+            {
+                float Estoque = quantComprada - quantUsada;
+                ResultadoFinal = Convert.ToString(Estoque);
+            }
+            return ResultadoFinal;
         }
-
     }
 }
 
