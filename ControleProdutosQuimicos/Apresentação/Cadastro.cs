@@ -83,7 +83,7 @@ namespace ControleProdutosQuimicos
             MessageBox.Show($"Este é o resultado do Estoque após o incremento: {Resultado}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Controle controle = new Controle();
-            String mensagem = controle.CadastrarProduto(Cx_Produto.Text, Cx_Item.Text, Cx_Numero_NF.Text, Cx_Pedido_Compra.Text, Cx_Quant_Compra.Text, Cx_Quant_Usada.Text,
+            String mensagem = controle.CadastrarProduto(table, Cx_Produto.Text, Cx_Item.Text, Cx_Numero_NF.Text, Cx_Pedido_Compra.Text, Cx_Quant_Compra.Text, Cx_Quant_Usada.Text,
                 Cx_Usuario_Logado.Text, DataEmissaonf, DataPedido, Data_Lancamento, Resultado);
 
             if (controle.tem)
@@ -318,6 +318,38 @@ namespace ControleProdutosQuimicos
             Controle controle = new Controle();
             AtualizarDados();
         }
+        public void Cx_Produto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (Cx_Produto.Text)
+            {
+                case "Ácido Cloridrico":
+                    Cx_Item.Text = "N4981917P012";
+                    tab_Produtos.SelectTab(0);
+                    break;
+                case "Ácido Sulfúrico":
+                    Cx_Item.Text = "Z40981302P025";
+                    tab_Produtos.SelectTab(1);
+                    break;
+                case "Hidróxido De Potássio":
+                    Cx_Item.Text = "Z40981302P003";
+                    tab_Produtos.SelectTab(2);
+                    break;
+                case "Tolueno":
+                    Cx_Item.Text = "Z40981302P017";
+                    tab_Produtos.SelectTab(3);
+                    break;
+                case "Acetona":
+                    Cx_Item.Text = "Z40981302P006";
+                    tab_Produtos.SelectTab(4);
+                    break;
+                case "Metiletilcetona":
+                    Cx_Item.Text = "Z40981302P005";
+                    tab_Produtos.SelectTab(5);
+                    break;
+
+            }
+
+        }
         private void BotaoLimparDados_Click(object sender, EventArgs e)
         {
             List<int> IdExclusao = new List<int>();
@@ -391,38 +423,6 @@ namespace ControleProdutosQuimicos
             Cx_Quant_Compra.ResetText();
             Cx_Quant_Usada.ResetText();
             Cx_Produto.Focus();
-
-        }
-        public void Cx_Produto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (Cx_Produto.Text)
-            {
-                case "Ácido Cloridrico":
-                    Cx_Item.Text = "N4981917P012";
-                    tab_Produtos.SelectTab(0);
-                    break;
-                case "Ácido Sulfúrico":
-                    Cx_Item.Text = "Z40981302P025";
-                    tab_Produtos.SelectTab(1);
-                    break;
-                case "Hidróxido De Potássio":
-                    Cx_Item.Text = "Z40981302P003";
-                    tab_Produtos.SelectTab(2);
-                    break;
-                case "Tolueno":
-                    Cx_Item.Text = "Z40981302P017";
-                    tab_Produtos.SelectTab(3);
-                    break;
-                case "Acetona":
-                    Cx_Item.Text = "Z40981302P006";
-                    tab_Produtos.SelectTab(4);
-                    break;
-                case "Metiletilcetona":
-                    Cx_Item.Text = "Z40981302P005";
-                    tab_Produtos.SelectTab(5);
-                    break;
-
-            }
 
         }
     }

@@ -37,11 +37,11 @@ namespace ControleProdutosQuimicos.Modelo
             }
             return mensagem;
             }
-        public string CadastrarProduto(String Produto, String Desenho, String Numero_NF, String Numero_Pedido, String Quant_Comprada, String Quant_Usada, String Usuario_Logado, DateTime Data_Emissao_NF, DateTime Data_Pedido, DateTime Data_Lancamento, string Resultado)
+        public string CadastrarProduto(string table, String Produto, String Desenho, String Numero_NF, String Numero_Pedido, String Quant_Comprada, String Quant_Usada, String Usuario_Logado, DateTime Data_Emissao_NF, DateTime Data_Pedido, DateTime Data_Lancamento, string Resultado)
         {
           
             LoginDalComandos cadprod = new LoginDalComandos();
-            this.mensagem = cadprod.CadastrarProduto(Produto, Desenho, Numero_NF, Numero_Pedido, Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido, Data_Emissao_NF, Data_Lancamento, Resultado);
+            this.mensagem = cadprod.CadastrarProduto(table, Produto, Desenho, Numero_NF, Numero_Pedido, Quant_Comprada, Quant_Usada, Usuario_Logado, Data_Pedido, Data_Emissao_NF, Data_Lancamento, Resultado);
             if (cadprod.tem)
             {
                 this.tem = true;
