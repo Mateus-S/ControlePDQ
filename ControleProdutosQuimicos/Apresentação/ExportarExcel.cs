@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ControleProdutosQuimicos.Modelo;
-using Microsoft.Office.Tools.Excel.Controls;
-
+using Microsoft.Office.Interop.Excel;
 namespace ControleProdutosQuimicos.Apresentação
 {
     public partial class frm_ExportarExcel : MetroFramework.Forms.MetroForm

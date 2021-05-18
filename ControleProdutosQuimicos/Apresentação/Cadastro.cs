@@ -104,6 +104,18 @@ namespace ControleProdutosQuimicos
         }
         private void Cadastro_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcetonaTableAdapter.Fill(this.bDPQDataSet.tblAcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblMetiletilcetonaTableAdapter.Fill(this.bDPQDataSet.tblMetiletilcetona);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblToluenoTableAdapter.Fill(this.bDPQDataSet.tblTolueno);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQDataSet.tblHidroxidoPostasio);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoSulfuricoTableAdapter.Fill(this.bDPQDataSet.tblAcidoSulfurico);
+            // TODO: esta linha de código carrega dados na tabela 'bDPQDataSet.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
+            this.tblAcidoCloridricoTableAdapter.Fill(this.bDPQDataSet.tblAcidoCloridrico);
 
             AtualizarDados();
             Cx_Usuario_Logado.Text = Program.Usuariologado;
@@ -399,17 +411,17 @@ namespace ControleProdutosQuimicos
         public void AtualizarDados()
         {
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblHidroxidoPostasio'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQDataSethome.tblHidroxidoPostasio);
+            this.tblHidroxidoPostasioTableAdapter.Fill(this.bDPQDataSet.tblHidroxidoPostasio);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblMetiletilcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblMetiletilcetona);
+            this.tblMetiletilcetonaTableAdapter.Fill(this.bDPQDataSet.tblMetiletilcetona);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcetona'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcetonaTableAdapter1.Fill(this.bDPQDataSethome.tblAcetona);
+            this.tblAcetonaTableAdapter.Fill(this.bDPQDataSet.tblAcetona);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblTolueno'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblToluenoTableAdapter1.Fill(this.bDPQDataSethome.tblTolueno);
+            this.tblToluenoTableAdapter.Fill(this.bDPQDataSet.tblTolueno);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoSulfurico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoSulfuricoTableAdapter1.Fill(this.bDPQDataSethome.tblAcidoSulfurico);
+            this.tblAcidoSulfuricoTableAdapter.Fill(this.bDPQDataSet.tblAcidoSulfurico);
             // TODO: esta linha de código carrega dados na tabela 'bDPQDataSethome.tblAcidoCloridrico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tblAcidoCloridricoTableAdapter1.Fill(this.bDPQDataSethome.tblAcidoCloridrico);
+            this.tblAcidoCloridricoTableAdapter.Fill(this.bDPQDataSet.tblAcidoCloridrico);
             // TODO: esta linha de código carrega dados na tabela 'bDPQServerTSEA.tblMetiletilcetona'. Você pode movê-la ou removê-la conforme necessário.
         }
         public void ResetarForm()

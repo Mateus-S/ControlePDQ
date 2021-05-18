@@ -14,7 +14,7 @@ namespace ControleProdutosQuimicos.DAL
         public Conexao()
 
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CSEA3NQ;Initial Catalog=BDPQ;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-1A659SL\SQLEXPRESS;Initial Catalog=BDPQ;Integrated Security=True";
         }
         public SqlConnection Conectar()
 

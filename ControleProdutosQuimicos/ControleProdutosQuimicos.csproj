@@ -72,7 +72,8 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.14.0.0.1\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -148,6 +149,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BdTolueno.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BDPQDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPQDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDPQDataSethome.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -253,6 +259,17 @@
     </None>
     <None Include="BancosBD\BdTolueno.xss">
       <DependentUpon>BdTolueno.xsd</DependentUpon>
+    </None>
+    <None Include="BDPQDataSet.xsc">
+      <DependentUpon>BDPQDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDPQDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDPQDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDPQDataSet.xss">
+      <DependentUpon>BDPQDataSet.xsd</DependentUpon>
     </None>
     <None Include="BDPQDataSethome.xsc">
       <DependentUpon>BDPQDataSethome.xsd</DependentUpon>
